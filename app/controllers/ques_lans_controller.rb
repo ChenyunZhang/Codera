@@ -1,0 +1,2 @@
+class QuesLansController < ApplicationController
+end
