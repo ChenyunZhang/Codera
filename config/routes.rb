@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   post 'login' => 'session#create'
   delete 'logout' => 'session#destroy', as: "logout"
 ###########################################################
-  root 'users#home'
+  root 'session#new'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

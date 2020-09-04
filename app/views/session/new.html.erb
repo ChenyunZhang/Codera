@@ -1,3 +1,23 @@
+<head>
+  <title>Codera</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+  <div class="container" style="margin-top:200px">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Welcome to Codera</h1>
+        <ul class="list-unstyled">
+          <li class="btn btn-block btn-info"><%=link_to "login", login_path%></li><br/>
+          <li class="btn btn-block btn-info"><%=link_to "signup", new_user_path%></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
 <%= form_for(:session, url: login_path) do |f|%>
 <%=f.label "Email Address"%>
 <%=f.email_field :email, placeholder: "Enter email" %>

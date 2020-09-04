@@ -1,0 +1,12 @@
+body {
+    background-image:url('https://images.pexels.com/photos/133953/pexels-photo-133953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat:no-repeat;
+}
+.navbar-custom { 
+    background: rgba(14, 167, 170, 0.4);
+} 
+
+.navbar-brand,.nav.navbar-nav li a{
+    color: rgba(8, 8, 8, 1);
+}
+
