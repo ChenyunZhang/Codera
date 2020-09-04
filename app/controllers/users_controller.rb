@@ -11,14 +11,24 @@ class UsersController < ApplicationController
         if @user.valid?
             redirect_to user_path(@user)
         else
-            flash[:errors] = @student.errors.full_messages
-            redirect_to login_path
+            flash[:errors] = @user.errors.full_messages
+            redirect_to new_user_path
         end
     end
 
+    def edit
+        @errors = flash[:errors]
+    end
+
     def update
-        @user.update(user_param)
-        redirect_to user_path(@user)
+        # byebug
+        if @user.update(user_param)
+            redirect_to user_path(@user)
+        else
+            flash[:errors] = @user.errors.full_messages
+            redirect_to edit_user_path
+        end
+
     end
 
     def destroy

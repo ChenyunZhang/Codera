@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Question.reset_pk_sequence
-# QuesLan.reset_pk_sequence
+
 # User.reset_pk_sequence
 # Category.reset_pk_sequence
 # Answer.reset_pk_sequence
+# Question.reset_pk_sequence
+# QuesLan.reset_pk_sequence
 
 Question.destroy_all
 QuesLan.destroy_all

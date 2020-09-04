@@ -8,7 +8,7 @@ class User < ApplicationRecord
                     format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i},
                     uniqueness: { case_sensitive: false }
     has_secure_password
-    validates :password, length: { minimum: 6, message: "password minimum length is 6"}
+    validates :password, length: { minimum: 6 }
 ##############################################################
     def full_name
         "#{self.first_name} #{self.last_name}"

@@ -1,7 +1,11 @@
-<h1><%= @user.full_name%></h1>
-<h2>My Questions</h2>
+
+<h3>
+<%= gravatar_for @user %>
+<%= @user.full_name%>
+</h3>
+<h4>My Questions</h4>
 <ul>
-<h2><%@user.questions.each do |question|%></h2>
+<h4><%@user.questions.each do |question|%></h4>
 <li>Question: <%=link_to question.title, question_path(question)%><br>
 tags: <% question.category_name.each do |name|%>
 <%=name%>
@@ -9,3 +13,5 @@ tags: <% question.category_name.each do |name|%>
 </li>
 <%end%>
 </ul>
+
+
