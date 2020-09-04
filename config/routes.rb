@@ -21,9 +21,9 @@ Rails.application.routes.draw do
   patch '/questions/:id', to: 'questions#update'
   delete 'questions/:id', to: 'questions#destroy'
 ################## login route#############################
-  get 'login' => 'session#new'
+  get 'login' => 'session#new', as: "login"
   post 'login' => 'session#create'
-  delete 'logout' => 'session#destroy'
+  delete 'logout' => 'session#destroy', as: "logout"
 ###########################################################
   root 'users#home'
 
