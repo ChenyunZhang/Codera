@@ -7,6 +7,7 @@ class SessionController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     # if the email is in the db, verify the password
     if user && user.authenticate(params[:session][:password])
+      log_in user
       redirect_to user
     else
       flash[:danger] = "Invalid email/password"
@@ -15,6 +16,7 @@ class SessionController < ApplicationController
   end
 
   def destroy
-
+    log_out
+    redirect_to "user#home"
   end
 end
