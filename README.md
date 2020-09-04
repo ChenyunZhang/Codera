@@ -10,4 +10,5 @@ Comment on the answers.
 Users have options to choose to answer and ask questions anonymously.
 
 
+reset-pk-sequence is not working!!!!😩
 

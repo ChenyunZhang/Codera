@@ -2,12 +2,18 @@ class UsersController < ApplicationController
     before_action :get_user, only: [:show, :edit, :update, :destroy]
 
     def new
+        @errors = flash[:errors]
         @user = User.new
     end
 
     def create
         @user = User.create(user_param)
-        redirect_to user_path(@user)
+        if @user.valid?
+            redirect_to user_path(@user)
+        else
+            flash[:errors] = @student.errors.full_messages
+            redirect_to login_path
+        end
     end
 
     def update
