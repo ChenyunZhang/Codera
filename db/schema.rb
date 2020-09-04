@@ -10,12 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_023609) do
+ActiveRecord::Schema.define(version: 2020_09_04_151825) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "question_id", null: false
-    t.string "content"
+    t.bigint "user_id", null: false
+    t.bigint "question_id", null: false
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
@@ -23,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_023609) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.text "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -39,18 +42,18 @@ ActiveRecord::Schema.define(version: 2020_09_04_023609) do
 
   create_table "questions", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "title"
-    t.string "content"
+    t.text "title"
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "password_digest"
+    t.text "first_name"
+    t.text "last_name"
+    t.text "email"
+    t.text "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
