@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'session/new'
   resources :answers
   # resources :categories
   # resources :ques_lans
@@ -19,8 +20,12 @@ Rails.application.routes.draw do
   get '/questions/:id/edit', to: 'questions#edit', as: 'edit_question'
   patch '/questions/:id', to: 'questions#update'
   delete 'questions/:id', to: 'questions#destroy'
-###############################################
+################## login route#############################
+  get 'login' => 'session#new'
+  post 'login' => 'session#create'
+  delete 'logout' => 'session#destroy'
+###########################################################
   root 'users#home'
-  
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
