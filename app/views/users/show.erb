@@ -1,17 +1,30 @@
-
 <h3>
-<%= gravatar_for @user %>
-<%= @user.full_name%>
+    <%= gravatar_for @user %><br/>
+    <%= @user.full_name%>
+    <hr/>
 </h3>
+
 <h4>My Questions</h4>
-<ul>
-<h4><%@user.questions.each do |question|%></h4>
-<li>Question: <%=link_to question.title, question_path(question)%><br>
-tags: <% question.category_name.each do |name|%>
-<%=name%>
-<%end%>
-</li>
-<%end%>
-</ul>
+<%=link_to "post a question", new_question_path%>
+    <ul>
+        <%@user.questions.each do |question|%>
+            <li>Question: <%=link_to question.title, question_path(question)%><br>
+                tags: <% question.category_name.each do |name|%>
+                    <%=name%>
+                <%end%>
+            </li>
+        <%end%>
+    </ul>
+<hr/>
+
+<h4>My Answers</h4>
+
+    <ul>
+        <%@user.answers.each do |answer|%>
+            <li>Question: <%=link_to answer.question.title, question_path(answer.question)%><br>
+            My answer: <%= answer.content%> </li>
+        <%end%>
+    </ul>
+
 
 

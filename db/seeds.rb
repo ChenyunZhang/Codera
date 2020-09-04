@@ -11,30 +11,61 @@
 # Answer.reset_pk_sequence
 # Question.reset_pk_sequence
 # QuesLan.reset_pk_sequence
+require 'faker'
+require 'activerecord-reset-pk-sequence'
 
-Question.destroy_all
 QuesLan.destroy_all
+Answer.destroy_all
+Question.destroy_all
 User.destroy_all
 Category.destroy_all
-Answer.destroy_all
+
+QuesLan.reset_pk_sequence
+Answer.reset_pk_sequence
+Question.reset_pk_sequence
+User.reset_pk_sequence
+Category.reset_pk_sequence
 
 user_1 = User.create(first_name:"Donald",last_name:"Duck",email: "abc@abc.com",password:"abc123")
-user_2 = User.create(first_name:"Minnie",last_name:"Duck",email: "efg@efg.com",password:"abc123")
+user_2 = User.create(first_name:"Minnie",last_name:"Duck",email: "efg@abc.com",password:"abc123")
 
-question_1 = Question.create(title:"why", content: "How old are you?", user:user_1)
-question_2 = Question.create(title:"YYY", content: "What's my name?", user:user_2)
-question_3 = Question.create(title:"aaa", content: "How are you?", user:user_1)
-question_4 = Question.create(title:"cccc", content: "What's my age?", user:user_2)
+30.times do
+    Category.create(
+        name: Faker::ProgrammingLanguage.name
+    )
+end
 
-category_1 = Category.create(name: "Python")
-category_2 = Category.create(name: "Ruby")
+10.times do
+    User.create(first_name: Faker::Name.first_name,
+                last_name: Faker::Name.last_name,
+                email: Faker::Internet.email,
+                password:"abc123")
+end
 
-ques_lan_1 = QuesLan.create(question: question_1, category: category_1)
-ques_lan_2 = QuesLan.create(question: question_2, category: category_2)
-ques_lan_3 = QuesLan.create(question: question_3, category: category_2)
-ques_lan_4 = QuesLan.create(question: question_4, category: category_2)
-ques_lan_5 = QuesLan.create(question: question_4, category: category_1)
+10.times do
+    Question.create(
+        title: Faker::ProgrammingLanguage.name,
+        content: Faker::Quote.famous_last_words,
+        user: [user_1,user_2].sample
+    )
+end
 
+10.times do
+    x = rand(0...10)
+    Answer.create(
+        content: Faker::ProgrammingLanguage.name,
+        question: Question.all[x],
+        user: [user_1,user_2].sample
+    )
+end
+
+10.times do
+    x = rand(0...12)
+    y = rand(0...30)
+    QuesLan.create(question: Question.all[x],
+                   category: Category.all[y]
+    )
+end
 
 
 
