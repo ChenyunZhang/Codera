@@ -15,7 +15,7 @@
  */
 
  body {
-    background-image:url('https://images.pexels.com/photos/133953/pexels-photo-133953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image:url('https://images.pexels.com/photos/136419/pexels-photo-136419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-repeat:no-repeat;
 }
 /* .navbar-custom { 
@@ -27,12 +27,18 @@
 } */
 
 .welcome{
-    margin-top:  200px;
     text-align: center;
 }
 
 .form{
-    width: 400px;
+    margin-top: 100px;
+    padding: 20px;
+    width: 500px;
     margin-left:auto;
     margin-right:auto;
+    background: rgba(121, 129, 131, 0.3);
+}
+
+.signup_link{
+    font-size: 18px;
 }
