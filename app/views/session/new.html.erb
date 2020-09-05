@@ -4,8 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
+<%= render "users/home"%>
+
 <body>
-        <div class="form">
+        <div class="row">
+        <div class="col-md-6 col-md-offset-3">
             <%= form_for(:session, url: login_path) do |f|%>
             <h1 class= "welcome">Welcome to Codera</h1>
                 <br>
@@ -20,9 +23,9 @@
                     </div>
                         <br>
                             <%=f.submit "Log in", class: "btn-block btn-primary btn-lg"%>
-                        <br/>
                 <h6 class="signup_link">Not a member? <%=link_to "Sign up now!", new_user_path%></h6>
             <%end%>
+        </div>
         </div>
 </body>
 

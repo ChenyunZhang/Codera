@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     def create
         @user = User.create(user_param)
         if @user.valid?
+            log_in @user
             redirect_to user_path(@user)
         else
             # byebug

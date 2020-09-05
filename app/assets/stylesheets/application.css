@@ -13,30 +13,21 @@
  *= require_tree .
  *= require_self
  */
-
- body {
-    background-image:url('https://images.pexels.com/photos/136419/pexels-photo-136419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+body {
+    background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-repeat:no-repeat;
 }
-/* .navbar-custom { 
-    background: rgba(14, 167, 170, 0.4);
+
+.navbar-custom { 
+    background: rgba(85, 92, 92, 0.4);
 } 
 
 .navbar-brand,.nav.navbar-nav li a{
     color: rgba(8, 8, 8, 1);
-} */
+}
 
 .welcome{
     text-align: center;
-}
-
-.form{
-    margin-top: 100px;
-    padding: 20px;
-    width: 500px;
-    margin-left:auto;
-    margin-right:auto;
-    background: rgba(121, 129, 131, 0.3);
 }
 
 .signup_link{
