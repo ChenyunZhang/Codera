@@ -9,3 +9,8 @@ E.g. User will be able to:
 ## 1. Comment on the a answer.
 ## 2. Users have options to choose to answer and ask questions anonymously.
 ## 3. rate a question
+
+
+Bug Log
+1. alerts are not working
+2. when redirect, the page needs to be refreshed to load css

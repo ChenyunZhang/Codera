@@ -5,22 +5,24 @@
 </head>
 
 <body>
-        <%= form_for(:session, url: login_path) do |f|%>
-        <h1 class= "welcome">Welcome to Codera</h1>
-        <br>
-        <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-        <%=f.email_field :email, placeholder: "Enter email", class: "form-control input-lg"%>
+        <div class="form">
+            <%= form_for(:session, url: login_path) do |f|%>
+            <h1 class= "welcome">Welcome to Codera</h1>
+                <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <%=f.email_field :email, placeholder: "Enter email", class: "form-control input-lg"%>
+                    </div>
+                        <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
+                            <%=f.password_field :password, placeholder: "Password",class:"form-control input-lg"%>
+                    </div>
+                        <br>
+                            <%=f.submit "Log in", class: "btn-block btn-primary btn-lg"%>
+                <p>New user?<%=link_to "Sign up now!", new_user_path%></p>
+            <%end%>
         </div>
-        <br>
-        <div class="input-group">
-         <span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
-        <%=f.password_field :password, placeholder: "Password",class:"form-control input-lg"%>
-        </div>
-        <br>
-        <%=f.submit "Log in", class: "btn-block btn-primary btn-lg"%>
-        <p">New user?<%=link_to "Sign up now!", new_user_path%></p>
-        <%end%>
 </body>
 
 

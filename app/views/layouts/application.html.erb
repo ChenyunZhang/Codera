@@ -37,8 +37,19 @@
  -->
     <div>
     <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>'><%= message %></div>
+      <div class="alert alert-danger"">
+      <%if message.class == Array%>
+        <ul>
+          <% message.each do |msg|%>
+              <li><%=msg%></li>
+          <%end%>
+        </ul>
+      <%else%>
+          <%= message %>
+      <%end%>
+      </div>
     <%end%>
+    </ol>
     <%= yield %>
     </div>
   </body>
