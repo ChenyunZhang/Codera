@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
 
     def create
         # byebug
-        @question = Question.create(question_param)
+        @question = @current_user.create(question_param)
         redirect_to question_path(@question)
     end
 

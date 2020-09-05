@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # resources :users
   ############ User Route ###############################
   get 'signup', to: 'users#new', as: 'new_user'
+  get 'login' => 'users#login', as: "login"
+  post 'login' => 'users#handle_login'
+  delete 'logout' => 'users#logout', as: "logout"
   post '/users', to: 'users#create'
   get '/users/:id', to: 'users#show', as: 'user'
   get '/users/:id/edit', to: 'users#edit', as: 'edit_user'
@@ -21,11 +24,7 @@ Rails.application.routes.draw do
   patch '/questions/:id', to: 'questions#update'
   delete 'questions/:id', to: 'questions#destroy'
 ################## login route#############################
-  get 'login' => 'session#new', as: "login"
-  post 'login' => 'session#create'
-  delete 'logout' => 'session#destroy', as: "logout"
-###########################################################
-  root 'session#new'
+  root 'users#login'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

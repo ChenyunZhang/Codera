@@ -1,6 +1,5 @@
 User Stories:
 
-E.g. User will be able to:
 ## 1. user can log in/out the application,
 ## 2. user can ask questions.(create, read, update, delete question)
 ## 3. user can answer questions.(create, read, update, delete answers)
@@ -22,7 +21,9 @@ E.g. User will be able to:
 
 
 
-## Jornal (😁Also called what did I do today😃):
+## Journal (😁Also called what did I do today😃):
 
 ## 9/5/2020
-1. add underconstruction gem
+1. 
+2. fixed erb tag not self closed issue
+3. 
