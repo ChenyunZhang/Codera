@@ -2,7 +2,6 @@ class UsersController < ApplicationController
     before_action :get_user, only: [:show, :edit, :update, :destroy]
 
     def new
-        @errors = flash[:errors]
         @user = User.new
     end
 

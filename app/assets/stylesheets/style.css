@@ -10,3 +10,15 @@ body {
     color: rgba(8, 8, 8, 1);
 }
 
+.welcome{
+    margin-top:  200px;
+    text-align: center;
+}
+
+form{
+    width: 400px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+

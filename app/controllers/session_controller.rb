@@ -11,7 +11,7 @@ class SessionController < ApplicationController
       log_in user
       redirect_to user_path(user)
     else
-      flash[:danger] = "Invalid email/password"
+      flash.now[:danger] = "Invalid email/password"
       redirect_to "/login"
     end
   end
