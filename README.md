@@ -14,6 +14,7 @@ User Stories:
 1. update user needs to be authenticate.
 2. bootstrap table for Home page and Question index page.
 3. question and categories relationship.
+4. profile need to be a table and give a link for edit
 
 ## Bug Log
 1. alerts are not working (fixed)

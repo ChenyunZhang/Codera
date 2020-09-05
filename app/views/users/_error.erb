@@ -1,0 +1,19 @@
+<div>
+      <%if flash %>
+        <% flash.each do |message_type, message| %>
+            <div class="alert alert-danger"">
+            <%if message.class == Array%>
+                <ul>
+                <% message.each do |msg|%>
+                    <li><%=msg%></li>
+                <%end%>
+                </ul>
+                <ul>
+                    <%else%>
+                    <li>*<%= message %></li>
+                    <%end%>
+                </ul>
+            </div>
+        <%end%>
+      <%end%>
+</div>

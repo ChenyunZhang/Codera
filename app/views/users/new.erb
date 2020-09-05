@@ -5,6 +5,7 @@
     <%= form_for @user do |f|%>
       <h1 class= "welcome">Welcome to Codera</h1>
       <br>
+      <%= render "users/error"%>
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <%=f.text_field :first_name, placeholder: "Last Name", class: "form-control input-lg"%>
