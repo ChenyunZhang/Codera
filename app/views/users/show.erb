@@ -12,6 +12,7 @@ Currnetly logged in as <%=@user.full_name%>
 <% @questions.each do |question|%>
 <li>
     <%=link_to question.title, question_path(@current_user,question)%>|
+    Last edit: <%= question.last_edit%>|
     <%=link_to "edit", edit_question_path(question)%>|
     <%=link_to "delete", delete_question_path(@current_user,question), :method => :delete %>
     <br/>
@@ -21,9 +22,9 @@ Currnetly logged in as <%=@user.full_name%>
 
 <h4>My Answered Questions</h4>
 <ol>
-    <% @answers.uniq.each do |answer|%>
+    <% @user.question_arr.each do |question|%>
         <li>
-            <%=link_to answer.question.title, question_path(@current_user,answer.question)%>
+            <%=link_to question.title, question_path(@current_user, question)%>
         </li>
     <%end%>
 </ol>

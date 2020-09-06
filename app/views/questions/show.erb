@@ -4,6 +4,6 @@
 
 <ul>
     <% @question.answers.each do |answer|%>
-        <li>Answer: <%= answer.content%></li>
+        <li>Answer: <%= answer.content%> <br/>-- by <%= answer.user.full_name%></li>
     <%end%>
 </ul>

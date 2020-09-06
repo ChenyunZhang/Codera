@@ -18,4 +18,23 @@ class User < ApplicationRecord
         "#{self.first_name} #{self.last_name}"
     end
 
+    def question_arr
+        arr = []
+        self.answers.each do |answer|
+            arr << answer.question
+        end
+        arr.uniq
+    end
+
+
+
+
+    # <% @user.question_arr.each do |question|%>
+    #     <li>
+    #         <%=link_to question.title, question_path(@current_user, @user.question_arr.find(title: "question"))%>
+    #     </li>
+    # <%end%>
+
+    
+
 end

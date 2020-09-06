@@ -16,4 +16,8 @@ class Question < ApplicationRecord
     end
   end
 
+  def last_edit
+    self.updated_at.strftime('%Y-%m-%d at %H:%M')
+  end
+
 end

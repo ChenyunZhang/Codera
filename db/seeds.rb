@@ -49,7 +49,7 @@ end
     x = rand(0...10)
     Answer.create(
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nisi felis, quis sollicitudin est faucibus ac. Suspendisse dolor risus, porta nec leo vitae, ultrices convallis velit. In iaculis justo a tellus tincidunt, vel ornare lorem auctor. Mauris dictum quam at risus porttitor mollis. Aenean quis lectus sed leo consectetur tincidunt. Aliquam semper feugiat diam, eget mattis ipsum tristique et. Praesent in magna mattis, gravida mi vel, interdum lorem. In hac habitasse platea dictumst.",
-        question: Question.all[x],
+        question: Question.first,
         user: [user_1,user_2].sample
     )
 end
