@@ -5,8 +5,7 @@
 Currnetly logged in as <%=@user.full_name%>
 <h4>My Questions</h4>
 <%=link_to "Post a Question", new_question_path(@user)%><br/>
-<%=link_to "Browse Questions", questions_path%><br/>
-
+<%=link_to "Browse Questions", { :controller=> 'questions', :action => 'index' }%><br/>
 
 
 <ol>

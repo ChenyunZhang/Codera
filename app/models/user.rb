@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :questions, dependent: :destroy
+    has_many :questions, -> {order ("updated_at DESC")}, dependent: :destroy
     accepts_nested_attributes_for :questions, allow_destroy: true
     has_many :answers, through: :questions
 
