@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   delete 'users/:id', to: 'users#destroy'
 ############## Quesiton Route ###########################
-  get "/users/:user_id/questions", to: "questions#index", as: 'questions'
+  get "/questions", to: "questions#index", as: 'questions'
   get "/users/:user_id/questions/new", to: 'questions#new', as: "new_question"
-  post "/users/:user_id/questions", to: 'questions#create'
+  post "questions", to: 'questions#create'
   get "/users/:user_id/questions/:id", to: "questions#show", as: 'question'
   get "/questions/:id/edit", to: 'questions#edit', as: "edit_question"
   patch "/users/:user_id/questions/:id", to: "questions#update"

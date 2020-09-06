@@ -42,6 +42,7 @@ class UsersController < ApplicationController
     def show
         @user = @current_user
         @questions = @user.questions
+        @answers = @user.answers
     end
 
     def edit
@@ -57,11 +58,6 @@ class UsersController < ApplicationController
             flash[:errors] = "incorrect password"
             redirect_to edit_user_path
         end
-    end
-
-    def destroy
-        @current_user.destroy
-        redirect_to login_path
     end
 
     private

@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
     before_action :get_question, only: [:show, :edit, :update, :destroy]
 
     def index
-        @questions = @current_user.questions
+        @questions = Question.all
     end
 
     def new

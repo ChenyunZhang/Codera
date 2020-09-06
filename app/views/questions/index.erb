@@ -1,6 +1,5 @@
 <h1>Question</h1>
 <ol><%@questions.each do |question|%>
-    <li><%=link_to question.title, question_path(question)%> -- posted by <%= question.user.full_name%>
-    <%=link_to "answer", %></li>
+    <li><%=link_to question.title, question_path(question)%> -- posted by <%= question.user.full_name%></li>
 <%end%>
 </ol>

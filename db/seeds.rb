@@ -6,11 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# User.reset_pk_sequence
-# Category.reset_pk_sequence
-# Answer.reset_pk_sequence
-# Question.reset_pk_sequence
-# QuesLan.reset_pk_sequence
 require 'faker'
 require 'activerecord-reset-pk-sequence'
 
@@ -42,9 +37,9 @@ end
                 password:"abc123")
 end
 
-10.times do
+30.times do
     Question.create(
-        title: Faker::ProgrammingLanguage.name,
+        title: "Why is #{Faker::Creature::Animal.name} you favorite animal?",
         content: Faker::Quote.famous_last_words,
         user: [user_1,user_2].sample
     )
@@ -53,7 +48,7 @@ end
 10.times do
     x = rand(0...10)
     Answer.create(
-        content: Faker::ProgrammingLanguage.name,
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nisi felis, quis sollicitudin est faucibus ac. Suspendisse dolor risus, porta nec leo vitae, ultrices convallis velit. In iaculis justo a tellus tincidunt, vel ornare lorem auctor. Mauris dictum quam at risus porttitor mollis. Aenean quis lectus sed leo consectetur tincidunt. Aliquam semper feugiat diam, eget mattis ipsum tristique et. Praesent in magna mattis, gravida mi vel, interdum lorem. In hac habitasse platea dictumst.",
         question: Question.all[x],
         user: [user_1,user_2].sample
     )
@@ -69,4 +64,4 @@ end
 
 
 
-puts "done"
+puts "🥳"
