@@ -1,17 +1,17 @@
 class QuestionsController < ApplicationController
-    before_action :get_question, only: [:show, :edit, :update, :destroy]
 
     def index
-        @questions = Question.all
+        @questions = @current_user.questions
     end
+
     def new
-        @question = Question.new
+        @question = @current_user.questions.build(question_param)
     end
 
     def create
         # byebug
-        @question = @current_user.create(question_param)
-        redirect_to question_path(@question)
+        @question = @current_user.questions.create(question_param)
+        redirect_to user_path(@current_user)
     end
 
     def update
@@ -25,9 +25,6 @@ class QuestionsController < ApplicationController
     end
 
     private
-    def get_question
-        @question = Question.find(params[:id])
-    end
 
     def question_param
         params.require(:question).permit(:user_id,:title,:content,category_ids:[], categories_attributes: [:name])

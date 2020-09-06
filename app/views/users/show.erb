@@ -1,24 +1,17 @@
+<% if logged_in? %>
+<div> <%= render "users/nav"%> </div>
+<%end%>
+
+Logged in as <%=@user.full_name%>
 <h4>My Questions</h4>
-<%=link_to "post a question", new_question_path%>
-    <ul>
-        <%@user.questions.each do |question|%>
-            <li>Question: <%=link_to question.title, question_path(question)%><br>
-                tags: <% question.category_name.each do |name|%>
-                    <%=name%>
-                <%end%>
-            </li>
-        <%end%>
-    </ul>
-<hr/>
+<%=link_to "Post a Question", new_question_path(@user)%><br/>
 
-<h4>My Answers</h4>
-
-    <ul>
-        <%@user.answers.each do |answer|%>
-            <li>Question: <%=link_to answer.question.title, question_path(answer.question)%><br>
-            My answer: <%= answer.content%> </li>
-        <%end%>
-    </ul>
-
-
+<ol>
+<% @user.questions.each do |q|%>
+<li>
+    <%= q.title%> -- <%=q.content%> |
+    <%=link_to "edit", edit_question_path(q)%><br/>
+</li>
+<%end%>
+</ol>
 

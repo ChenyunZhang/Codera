@@ -15,7 +15,7 @@ class UsersController < ApplicationController
           flash[:danger] = "Invalid email/password"
           redirect_to login_path
         end
-      end
+    end
 
       def logout
         session.delete(:user_id)
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
         else
             # byebug
             flash[:errors] = @user.errors.full_messages
-            redirect_to new_user_path
+            redirect_to signup_path
         end
     end
 
@@ -49,10 +49,11 @@ class UsersController < ApplicationController
 
     def update
         # byebug
-        if @user.update(user_param)
+        if @current_user.authenticate(params[:user]["password"])
+            @user.update(user_param)
             redirect_to user_path(@user)
         else
-            flash[:errors] = @user.errors.full_messages
+            flash[:errors] = "incorrect password"
             redirect_to edit_user_path
         end
 
@@ -69,6 +70,11 @@ class UsersController < ApplicationController
     end
 
     def user_param
-        params.require(:user).permit(:first_name,:last_name,:password,:email)
+        params.require(:user).permit(:first_name,
+            :last_name,
+            :password,
+            :email,
+            question_ids:[],
+            questions_attributes: [:title, :content])
     end
 end

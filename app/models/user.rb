@@ -14,4 +14,11 @@ class User < ApplicationRecord
     def full_name
         "#{self.first_name} #{self.last_name}"
     end
+
+    def questions_attributes=(question_attributes)
+        question_attributes.values.each do |question_attribute|
+          question = Question.find_or_create_by(question_attribute)
+          self.questions << question
+        end
+     end
 end

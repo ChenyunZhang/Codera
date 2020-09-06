@@ -3,14 +3,9 @@
   <head>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <title>Codera</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <% if logged_in? %>
-    <div> <%= render "users/nav"%> </div>
-    <%end%>
-    </nav>
   </head>
   <body>
       <%= yield %>

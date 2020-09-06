@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
-  get 'session/new'
-  resources :answers
-  # resources :categories
-  # resources :ques_lans
-  # resources :questions
-  # resources :users
   ############ User Route ###############################
-  get 'signup', to: 'users#new', as: 'new_user'
+  get 'signup', to: 'users#new', as: 'signup'
   get 'login' => 'users#login', as: "login"
   post 'login' => 'users#handle_login'
   delete 'logout' => 'users#logout', as: "logout"
@@ -16,15 +10,24 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   delete 'users/:id', to: 'users#destroy'
 ############## Quesiton Route ###########################
-  get '/questions', to: 'questions#index', as: 'questions'
-  get '/questions/new', to: 'questions#new', as: 'new_question'
-  post '/questions', to: 'questions#create'
-  get '/questions/:id', to: 'questions#show', as: 'question'
-  get '/questions/:id/edit', to: 'questions#edit', as: 'edit_question'
-  patch '/questions/:id', to: 'questions#update'
-  delete 'questions/:id', to: 'questions#destroy'
+  get "/users/:user_id/questions", to: "questions#index", as: 'questions'
+  get "/users/:user_id/questions/new", to: 'questions#new', as: "new_question"
+  post "/users/:user_id/questions", to: 'questions#create'
+  get "/users/:user_id/questions/:id", to: "questions#show", as: 'question'
+  get "/users/:user_id/questions/:id/edit", to: 'questions#edit', as: "edit_question"
+  patch "/users/:user_id/questions/:id", to: "questions#update"
+  delete "/users/:user_id/questions/:id", to: 'questions#destroy'
+#################### ugly nested route #########################
+
+  # get '/questions', to: 'questions#index', as: 'questions'
+  # get '/questions/new', to: 'questions#new', as: 'new_question'
+  # post '/questions', to: 'questions#create'
+  # get '/questions/:id', to: 'questions#show', as: 'question'
+  # get '/questions/:id/edit', to: 'questions#edit', as: 'edit_question'
+  # patch '/questions/:id', to: 'questions#update'
+  # delete 'questions/:id', to: 'questions#destroy'
 ################## login route#############################
-  root 'users#login'
+ 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
