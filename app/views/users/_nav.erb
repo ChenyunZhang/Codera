@@ -7,7 +7,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
             <!--################### use .html_safe inside of link_to for the glyphicon ################ -->
-				<li><%=link_to '<i class="glyphicon glyphicon-user"></i> Profile'.html_safe, edit_user_path%></li>
+				<li><%=link_to '<i class="glyphicon glyphicon-user"></i> Profile'.html_safe, edit_user_path(@current_user)%></li>
                 <li><%=link_to '<i class="glyphicon glyphicon-log-out"></i> Log out'.html_safe, logout_path, method: :delete%></li>
             </ul>
 		</div>

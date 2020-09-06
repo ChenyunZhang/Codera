@@ -1,18 +1,14 @@
 User Stories:
 
 ## 1. user can log in/out the application. Done !
-
 ## 2. user can ask questions.(create, read, update, delete question) Done!!
-
 ## 3. user can answer questions.(create, read, update, delete answers)
-
 
 ## Stretch goal:
 ## 1. Comment on the a answer.
 ## 2. Users have options to choose to answer and ask questions anonymously.
 ## 3. rate a question
 ## 4. use api to get some questions (API: https://opentdb.com/api.php?amount=50&difficulty=medium)
-
 
 
 ## Journal (Also called what did I do today😃):
@@ -34,7 +30,7 @@ User Stories:
 3. finished CRUD for question model.
 4. nested question route from user route.
 5. get question create and question delete work.
-6. the question index page is not working. 😟
+6. the question index page is not working.😟
 
 ## 9/4/2020
 1. alerts are not working (fixed)

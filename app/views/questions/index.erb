@@ -1,5 +1,6 @@
 <h1>Question</h1>
+<%= render "users/nav"%>
 <ol><%@questions.each do |question|%>
-    <li><%=link_to question.title, question_path(question)%> -- posted by <%= question.user.full_name%></li>
+<%= link_to question.title, question_path(@current_user, question) %><br>
 <%end%>
 </ol>
