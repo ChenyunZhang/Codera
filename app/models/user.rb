@@ -1,7 +1,9 @@
 class User < ApplicationRecord
     has_many :questions, dependent: :destroy
+    accepts_nested_attributes_for :questions, allow_destroy: true
     has_many :answers, through: :questions
-    # accepts_nested_attributes_for :questions, allow_destroy: true, reject_if: :all_blank
+
+################################ Validation ###########################################
     before_save {self.email = email.downcase } #or { email.downcase!}
     validates :first_name, :last_name, presence: true, length: { maximum: 50 }
     validates :email, presence: true,
@@ -9,16 +11,11 @@ class User < ApplicationRecord
                     format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i},
                     uniqueness: { case_sensitive: false }
     has_secure_password
-    validates :password, length: { minimum: 6 }
-##############################################################
+    validates :password, length: { minimum: 6 }, allow_blank:true;
+
+###########################################################################################
     def full_name
         "#{self.first_name} #{self.last_name}"
     end
 
-    def questions_attributes=(question_attributes)
-        question_attributes.values.each do |question_attribute|
-          question = Question.find_or_create_by(question_attribute)
-          self.questions << question
-        end
-     end
 end

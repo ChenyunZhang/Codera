@@ -14,10 +14,11 @@ Rails.application.routes.draw do
   get "/users/:user_id/questions/new", to: 'questions#new', as: "new_question"
   post "/users/:user_id/questions", to: 'questions#create'
   get "/users/:user_id/questions/:id", to: "questions#show", as: 'question'
-  get "/users/:user_id/questions/:id/edit", to: 'questions#edit', as: "edit_question"
+  get "/questions/:id/edit", to: 'questions#edit', as: "edit_question"
   patch "/users/:user_id/questions/:id", to: "questions#update"
-  delete "/users/:user_id/questions/:id", to: 'questions#destroy'
+  delete "/users/:user_id/questions/:id", to: 'questions#destroy', as: "delete_question"
 #################### ugly nested route #########################
+  root 'users#login'
 
   # get '/questions', to: 'questions#index', as: 'questions'
   # get '/questions/new', to: 'questions#new', as: 'new_question'

@@ -41,6 +41,7 @@ class UsersController < ApplicationController
 
     def show
         @user = @current_user
+        @questions = @user.questions
     end
 
     def edit
@@ -49,19 +50,18 @@ class UsersController < ApplicationController
 
     def update
         # byebug
-        if @current_user.authenticate(params[:user]["password"])
+        if @user
             @user.update(user_param)
             redirect_to user_path(@user)
         else
             flash[:errors] = "incorrect password"
             redirect_to edit_user_path
         end
-
     end
 
     def destroy
         @current_user.destroy
-        # redirect_to users_path
+        redirect_to login_path
     end
 
     private

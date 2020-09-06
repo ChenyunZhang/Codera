@@ -7,10 +7,12 @@ Logged in as <%=@user.full_name%>
 <%=link_to "Post a Question", new_question_path(@user)%><br/>
 
 <ol>
-<% @user.questions.each do |q|%>
+<% @questions.each do |question|%>
 <li>
-    <%= q.title%> -- <%=q.content%> |
-    <%=link_to "edit", edit_question_path(q)%><br/>
+    <%=link_to question.title, question_path(@current_user,question)%>|
+    <%=link_to "edit", edit_question_path(question)%>|
+    <%=link_to "delete", delete_question_path(@current_user,question), :method => :delete %>
+    <br/>
 </li>
 <%end%>
 </ol>

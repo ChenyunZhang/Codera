@@ -4,6 +4,8 @@ User Stories:
 ## 2. user can ask questions.(create, read, update, delete question)
 ## 3. user can answer questions.(create, read, update, delete answers)
 
+CRUD!!!!!
+
 ## Stretch goal:
 ## 1. Comment on the a answer.
 ## 2. Users have options to choose to answer and ask questions anonymously.
@@ -21,6 +23,8 @@ User Stories:
 2. when redirect, the page needs to be refreshed to load css
 3. the link_to and glyphicon is not inline(fixed, use .html_safe)
 ## <%=link_to '<i class="glyphicon glyphicon-user"></i> Sign up'.html_safe, new_user_path%>
+4. as
+
 
 ## Journal (Also called what did I do today😃):
 ## 9/5/2020
