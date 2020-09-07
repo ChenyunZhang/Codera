@@ -16,12 +16,16 @@
 body {
     background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-repeat:no-repeat;
-    padding-top: 70px;
+    padding-top: 75px;
 }
 
-.navbar-custom { 
-    background: rgba(85, 92, 92, 0.4);
+.navbar-custom, .col-md-4.col-md-offset-4{
+    background: rgba(129, 189, 238, 0.3);
 } 
+
+#form{
+    padding-top: 75px;
+}
 
 .navbar-brand,.nav.navbar-nav li a{
     color: rgba(8, 8, 8, 1);

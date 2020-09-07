@@ -3,6 +3,7 @@
         <%= form_for @answer do |f|%>
         <%=f.label "answer"%>
         <%=f.text_field :content%><br/>
+        <%=f.hidden_field :question_id%>
         <%= f.submit "answer", class: "btn btn-primary"%>
         <%end%>
     </div>
