@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
         # byebug
         @question = @current_user.questions.build
     end
-    
+
     def create
         # byebug
         @question = @current_user.questions.create(question_param)

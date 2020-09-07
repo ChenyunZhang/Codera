@@ -1,8 +1,12 @@
 User Stories:
 
 ## 1. user can log in/out the application. Done !
+
 ## 2. user can ask questions.(create, read, update, delete question) Done!!
-## 3. user can answer questions.(create, read, update, delete answers)
+
+## 3. user can answer questions.(create, read, update, ##### delete answers)
+
+## 4. user can check the categories of the questions.
 
 ## Stretch goal:
 ## 1. Comment on the a answer.
@@ -19,9 +23,15 @@ User Stories:
         1. user should be able to create mutlple categories while they post questions.
 3. User should be able to answer a question from the question show page
 4. bootstrap dropdown box is not compatible with rails, research if have tmie.
+5. validation for edit forms. update should give error message
+6. make a category index, so when user clicks on the categories, it brings the user to category list, 
+and being able to pick a category of questions.
 
 ## 9/6/2020
 1. fixed the deplicate answered questions bug.
+2. question index page works, and added post question, edit question.
+
+come back for delete question
 
 
 ## 9/5/2020
@@ -30,7 +40,7 @@ User Stories:
 3. finished CRUD for question model.
 4. nested question route from user route.
 5. get question create and question delete work.
-6. the question index page is not working.😟
+6. the question index page is not working.
 
 ## 9/4/2020
 1. alerts are not working (fixed)

@@ -26,11 +26,7 @@ post 'answers', to: "answers#create"
 get 'answers/:id', to: "answers#show", as: "answer"
 get 'answers/:id/edit', to: "answers#edit", as: "edit_answer"
 patch 'answers/:id', to: "answers#update"
-delete 'answers/:id', to: "answers#destroy"
-
-
-
-
+delete 'answers/:id', to: "answers#destroy", as: "delete_answer"
 #################### Answer Route #############################
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

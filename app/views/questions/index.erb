@@ -1,6 +1,15 @@
 <%= render "users/nav"%>
-<h1>Question</h1>
-<ol><%@questions.each do |question|%>
-<%= link_to question.title, question_path(@current_user, question) %><br>
+
+<h2><%@questions.each do |question|%></h2>
+<div class="container mt-5">
+    <div class="post-about mb-4">
+      <div>
+        <h2>Question</h2>
+        <%question.categories do |category|%>
+        <span class="post-tag"><%=category.name%></span>
+        <%end%>
+      </div>
+      <p><%= link_to question.title, question_path(@current_user, question) %></p>
+    </div>
+</div>
 <%end%>
-</ol>

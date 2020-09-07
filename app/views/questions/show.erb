@@ -1,11 +1,18 @@
 <%=render "users/nav"%>
-<h1>Question: <%= @question.title%></h1><hr/>
-<h2><%= @question.content%></h2>
-<h6>--<%=@question.user.full_name%></h6>
+<h1><%= @question.title%></h1><hr/>
+<h2>Quesstion content:<%= @question.content%></h2>
+<h6>Posted by--<%=@question.user.full_name%></h6>
 
 <ul>
     <% @question.answers.each do |answer|%>
-        <li>Answer: <%= answer.content%> <br/>-- by <%= answer.user.full_name%></li>
+        <li>Answer: <%= answer.content%> <br/>-- by
+        <%= answer.user.full_name%>
+        <%if answer.user == @current_user %>
+        <%=link_to "edit", edit_answer_path(answer)%>|
+        <%=link_to "delete", delete_answer_path(answer), :method => :delete %>
+        <%end%>
+        </li>
     <%end%>
 </ul>
+
 <%=link_to "Post a Answer", new_answer_path%>
