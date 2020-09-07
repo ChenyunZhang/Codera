@@ -54,11 +54,11 @@ end
     )
 end
 
-10.times do
+2.times do
     x = rand(0...12)
     y = rand(0...30)
-    QuesLan.create(question: Question.all[x],
-                   category: Category.all[y]
+    QuesLan.create(question: Question.first,
+                   category: Category.first
     )
 end
 

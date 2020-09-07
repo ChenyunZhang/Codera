@@ -2,10 +2,9 @@
 <div> <%= render "users/nav"%> </div>
 <%end%>
 
-Currnetly logged in as <%=@user.full_name%>
+Currently logged in as <%=@user.full_name%>
 <h4>My Questions</h4>
 <%=link_to "Post a Question", new_question_path(@user)%><br/>
-<%=link_to "Browse Questions", { :controller=> 'questions', :action => 'index' }%><br/>
 
 
 <ol>
@@ -24,7 +23,7 @@ Currnetly logged in as <%=@user.full_name%>
 <ol>
     <% @user.question_arr.each do |question|%>
         <li>
-            <%=link_to question.title, question_path(@current_user, question)%>
+            <%=link_to question.title, question_path(@current_user,question)%>
         </li>
     <%end%>
 </ol>

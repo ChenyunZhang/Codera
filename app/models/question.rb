@@ -1,6 +1,7 @@
 class Question < ApplicationRecord
   belongs_to :user, optional: true
   has_many :answers, dependent: :destroy
+  
   has_many :ques_lans, dependent: :destroy
   has_many :categories, through: :ques_lans
   # accepts_nested_attributes_for :categories
