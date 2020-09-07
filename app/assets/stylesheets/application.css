@@ -13,23 +13,28 @@
  *= require_tree .
  *= require_self
  */
+ /*
+ *= require font-awesome
+ */
+ 
 body {
     background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-repeat:no-repeat;
     padding-top: 75px;
 }
 
-/* .navbar-custom, .col-md-4.col-md-offset-4{
-    background: rgba(6, 72, 160, 0.3);
-}  */
+.navbar-custom{
+    background: rgb(209, 216, 226);
+} 
 
 #form{
     padding-top: 75px;
 }
 
-.navbar-brand,.nav.navbar-nav li a{
+.navbar-brand, .nav.navbar-nav li a, .my_question td{
     color: rgba(8, 8, 8, 1);
 }
+
 
 .welcome{
     text-align: center;

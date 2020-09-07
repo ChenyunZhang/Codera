@@ -7,20 +7,22 @@
       <h1 class= "welcome">Update profile</h1>
       <br>
       <%= render "users/error"%>
+      <div class="row">
+      <div class="input-group ">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <span><%=f.text_field :first_name, placeholder: "Last Name", class: "form-control input-lg"%></span>
+      </div>
+
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <%=f.text_field :first_name, placeholder: "Last Name", class: "form-control input-lg"%>
+        <span><%=f.text_field :last_name, placeholder: "Last Name", class: "form-control input-lg"%></span>
       </div>
-      <br>
-      <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <%=f.text_field :last_name, placeholder: "Last Name", class: "form-control input-lg"%>
-      </div>
-      <br>
+
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
         <%=f.email_field :email, placeholder: "Enter email", class: "form-control input-lg"%>
       </div>
+
       <br>
       <%=f.submit "Update", class: "btn-block btn-primary btn-lg"%>
     <%end%>

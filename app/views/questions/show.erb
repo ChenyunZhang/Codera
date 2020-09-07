@@ -1,18 +1,23 @@
 <%=render "users/nav"%>
-<h1><%= @question.title%></h1><hr/>
-<h2>Quesstion content:<%= @question.content%></h2>
-<h6>Posted by--<%=@question.user.full_name%></h6>
 
-<ul>
-    <% @question.answers.each do |answer|%>
-        <li>Answer: <%= answer.content%> <br/>-- by
-        <%= answer.user.full_name%>
-        <%if answer.user == @current_user %>
-        <%=link_to "edit", edit_answer_path(answer)%>|
-        <%=link_to "delete", delete_answer_path(answer), :method => :delete %>
-        <%end%>
-        </li>
-    <%end%>
-</ul>
-
-<%=link_to "Post a Answer", new_answer_path%>
+<div class="row">
+    <div class="question_show col-md-8 col-md-offset-2">
+        <table class="table table-hover">
+            <caption style="border: inherit; background-color: lightgrey;">
+           <div> <strong><%= @question.title%></strong><br/><%= @question.content%><br/>by --<%=@question.user.full_name%></div>
+            </caption>
+            <tbody>
+                <tr>
+                    <% @question.answers.each do |answer|%>
+                    <%if answer.user == @current_user %>
+                        <td><%= answer.user.full_name%> posted an answer:<br/><br/> <%= answer.content%></td>
+                        <td><%=link_to "edit", edit_answer_path(answer)%></td>
+                        <td><%=link_to "delete", delete_answer_path(answer), :method => :delete %></td>
+                    <%end%>
+                </tr>
+                <%end%>
+            </tbody>
+        </table>
+        <%=link_to "Post a Answer", new_answer_path%>
+    </div>
+</div>

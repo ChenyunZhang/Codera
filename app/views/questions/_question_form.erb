@@ -1,8 +1,0 @@
-<%=form_for @question do |f|%>
-<%=f.label :title%><br/>
-<%=f.text_area :title%><br/>
-<%=f.label :content%><br/>
-<%=f.text_area :content%><br/>
-<%# add categories here, it should be nested form, because user should be able to add categories %>
-<%= f.submit "Post"%>
-<%end%>

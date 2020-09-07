@@ -10,18 +10,18 @@ class AnswersController < ApplicationController
 
     def create
         @answer = @current_user.answers.create(answer_param)
-        redirect_to user_path(@current_user)
+        redirect_to question_path(@current_user, @answer.question)
     end
 
     def update
         @answer.update(answer_param)
-        redirect_to question_path(@answer.question)
+        redirect_to question_path(@current_user,@answer.question)
     end
 
     def destroy
         # byebug
         @answer.destroy
-        redirect_to user_path(@current_user)
+        redirect_to question_path(@current_user,@answer.question)
     end
 
     private

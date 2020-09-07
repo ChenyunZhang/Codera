@@ -1,4 +1,19 @@
 <%=render "users/nav"%>
-<h1>Post a question</h1>
-<%=render 'question_form'%>
-
+<div class="row" id="form">
+  <div class="col-md-4 col-md-offset-4">
+    <%=form_for @question do |f|%>
+      <h1 class= "welcome">Post a question</h1>
+      <br>
+      <%= render "users/error"%>
+      <div class="form-group">
+        <%=f.text_field :title, placeholder: "Title", class: "form-control input-lg"%>
+      </div>
+      <br>
+      <div class="form-group">
+        <%=f.text_area :content, rows: 7, placeholder: "Start here...",class:"form-control input-lg"%>
+      </div>
+      <br>
+      <%=f.submit "Post", class: "btn-block btn-primary btn-lg"%>
+    <%end%>
+  </div>
+</div>

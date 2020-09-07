@@ -19,15 +19,14 @@ Rails.application.routes.draw do
 #################### ugly nested route #########################
   root 'users#login'
 #################### Answer Route #############################
-
-########questin doesn't need index
-get "questions/:id/answers/new", to: "answers#new", as: "new_answer"
-post 'answers', to: "answers#create"
-get 'answers/:id', to: "answers#show", as: "answer"
-get 'answers/:id/edit', to: "answers#edit", as: "edit_answer"
-patch 'answers/:id', to: "answers#update"
-delete 'answers/:id', to: "answers#destroy", as: "delete_answer"
+  get "questions/:id/answers/new", to: "answers#new", as: "new_answer"
+  post 'answers', to: "answers#create"
+  get 'answers/:id', to: "answers#show", as: "answer"
+  get 'answers/:id/edit', to: "answers#edit", as: "edit_answer"
+  patch 'answers/:id', to: "answers#update"
+  delete 'answers/:id', to: "answers#destroy", as: "delete_answer"
 #################### Answer Route #############################
-
+  get "categories", to: "categories#index", as: "categories"
+  get "categories/:id", to: "categories#show", as: "category"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
