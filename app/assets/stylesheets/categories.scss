@@ -1,3 +1,26 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.grid-container {
+    display: grid;
+    grid-gap: 70px 70px;
+    grid-template-columns: auto auto auto;
+    padding: 30px;
+  }
+  
+.grid-item.category{
+    background-color: rgba(146, 153, 165, 0.2);
+    padding: 100px;
+    height: 250px;
+    border-radius: 5%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+  }
+
+.grid-item:hover{
+    background-color: rgba(171, 199, 241, 0.2);
+  }

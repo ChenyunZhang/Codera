@@ -12,14 +12,10 @@
       <tbody>
           <% @questions.each do |question| %>
           <tr>
-              <td><%= link_to question.title, question_path(@current_user, question) %></td>
+              <td><%=link_to question.title, question_path(@current_user, question) %></td>
           </tr>
           <%end%>
       </tbody>
     </table>
   </div>
 </div>
-
-
-
-
