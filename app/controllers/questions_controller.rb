@@ -32,6 +32,6 @@ class QuestionsController < ApplicationController
         @question = Question.find_by_id(params[:id])
     end
     def question_param
-        params.require(:question).permit(:user_id,:title,:content)
+        params.require(:question).permit(:user_id,:title,:content,category_ids:[], categories_attributes: [:name])
     end
 end

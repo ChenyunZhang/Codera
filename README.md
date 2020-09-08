@@ -4,9 +4,9 @@ User Stories:
 
 ## 2. user can ask questions.(create, read, update, delete question) Done!!
 
-## 3. user can answer questions.(create, read, update, ##### delete answers)
+## 3. user can answer questions.(create, read, update, ##### delete answers). Finished.
 
-## 4. user can check the categories of the questions.
+## 4. user can check the categories of the questions. Done
 
 ## Stretch goal:
 ## 1. Comment on the a answer.
