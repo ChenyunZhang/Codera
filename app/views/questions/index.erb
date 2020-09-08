@@ -1,21 +1,11 @@
 <%= render "users/nav"%>
 
-<div class="row">
-  <div class="question_show col-md-4 col-md-offset-4">
-    <table class="question_index table table-hover">
-      <thead>
-          <tr>
-          <th scope="col" >Questions</th>
-          </tr>
-      </thead>
-
-      <tbody>
-          <% @questions.each do |question| %>
-          <tr>
-              <td><%=link_to question.title, question_path(@current_user, question) %></td>
-          </tr>
+<div class="grid-container question">
+  <% @questions.each do |question| %>
+      <div class="grid-item question"><%=link_to question.title, question_path(@current_user, question) %><br/>
+        <% question.categories.uniq.each do |category|%>
+       <span class="tag"><%=link_to category.name, category_path(category)%></span>
           <%end%>
-      </tbody>
-    </table>
-  </div>
+      <%end%>
+    </div>
 </div>

@@ -16,15 +16,16 @@
  /*
  *= require font-awesome
  */
- 
+
 body {
-    background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-repeat:no-repeat;
+    background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
+    background-repeat:repeat;
+    /* background-image: linear-gradient(to right, rgba(129, 81, 13, 0), rgba(214, 231, 100, 0.637)); */
     padding-top: 75px;
 }
 
 .navbar-custom{
-    background: rgb(209, 216, 226);
+    background: rgba(179, 180, 182, 0.164);
 } 
 
 #form{
@@ -54,4 +55,9 @@ body {
     .form-control{
         color: $state-danger-text;
     }
+}
+
+
+input[type=checkbox]{
+    width:50px;
 }

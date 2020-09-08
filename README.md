@@ -1,12 +1,12 @@
 User Stories:
 
-## 1. user can log in/out the application. Done !
+## 1. user can log in/out the application. create, read, update
 
-## 2. user can ask questions.(create, read, update, delete question) Done!!
+## 2. user can ask questions.(create, read, update, delete question) 
 
-## 3. user can answer questions.(create, read, update, ##### delete answers). Finished.
+## 3. user can answer questions.(create, read, update, ##### delete answers). 
 
-## 4. user can check the categories of the questions. Done
+## 4. user can check the categories of the questions. create
 
 ## Stretch goal:
 ## 1. Comment on the a answer.

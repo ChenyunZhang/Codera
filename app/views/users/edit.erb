@@ -2,7 +2,7 @@
 <div> <%= render "users/nav"%> </div>
 <%end%>
 <div class="row" id="form">
-  <div class="col-md-4 col-md-offset-4">
+  <div class="edit tcol-md-4 col-md-offset-4">
     <%= form_for @user do |f|%>
       <h1 class= "welcome">Update profile</h1>
       <br>
@@ -17,14 +17,13 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <span><%=f.text_field :last_name, placeholder: "Last Name", class: "form-control input-lg"%></span>
       </div>
-
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
         <%=f.email_field :email, placeholder: "Enter email", class: "form-control input-lg"%>
       </div>
 
       <br>
-      <%=f.submit "Update", class: "btn-block btn-primary btn-lg"%>
+      <%=f.submit "save", class: "btn-block btn-primary btn-lg"%>
     <%end%>
   </div>
 </div>

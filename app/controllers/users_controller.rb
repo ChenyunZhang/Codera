@@ -51,11 +51,11 @@ class UsersController < ApplicationController
 
     def update
         # byebug
-        if @user
+        if User.find_by(email: params[:user][:email]) == @user || User.find_by(email: params[:user][:email]).nil?
             @user.update(user_param)
             redirect_to user_path(@user)
         else
-            flash[:errors] = "incorrect password"
+            flash[:errors] = "Email is taken"
             redirect_to edit_user_path
         end
     end

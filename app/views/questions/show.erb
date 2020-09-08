@@ -3,14 +3,14 @@
 <div class="row">
     <div class="question_show col-md-8 col-md-offset-2">
         <table class="table table-hover">
-            <caption style="border: inherit; background-color: lightgrey;">
+            <caption style="background-color: red;">
            <div> <strong><%= @question.title%></strong><br/><%= @question.content%><br/>by --<%=@question.user.full_name%></div>
             </caption>
             <tbody>
                 <tr>
                     <% @question.answers.each do |answer|%>
+                    <td><%= answer.user.full_name%> posted an answer:<br/><br/> <%= answer.content%></td>
                     <%if answer.user == @current_user %>
-                        <td><%= answer.user.full_name%> posted an answer:<br/><br/> <%= answer.content%></td>
                         <td><%=link_to "edit", edit_answer_path(answer)%></td>
                         <td><%=link_to "delete", delete_answer_path(answer), :method => :delete %></td>
                     <%end%>
@@ -21,3 +21,4 @@
         <%=link_to "Post a Answer", new_answer_path%>
     </div>
 </div>
+

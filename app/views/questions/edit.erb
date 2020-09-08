@@ -9,6 +9,10 @@
         <%=f.text_field :title, placeholder: "Title", class: "form-control input-lg"%>
       </div>
       <br>
+     <div class="form-group">
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "form-control input-lg"%>
+      </div>
+      <br>
       <div class="form-group">
         <%=f.text_area :content, rows: 7, placeholder: "Start here...",class:"form-control input-lg"%>
       </div>
