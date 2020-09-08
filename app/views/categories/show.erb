@@ -1,6 +1,21 @@
 <%=render "users/nav"%>
-<ul>
-    <%@category.questions.uniq.each do |question|%>
-    <li><%=link_to question.title, question_path(question)%></li>
-    <%end%>
-</ul>
+
+<div class="row">
+  <div class="question_show col-md-4 col-md-offset-4">
+    <table class="question_index table table-hover">
+      <thead>
+          <tr>
+          <th scope="col" >Questions</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <%@category.questions.uniq.each do |question|%>
+          <tr>
+              <td><%=link_to question.title, question_path(question)%></td>
+          </tr>
+          <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>
