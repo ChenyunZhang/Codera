@@ -10,7 +10,12 @@ class AnswersController < ApplicationController
 
     def create
         @answer = @current_user.answers.create(answer_param)
-        redirect_to question_path(@current_user, @answer.question)
+        if @answer.id.nil?
+            flash[:error] = @answer.errors.full_messages
+            redirect_to new_answer_path(@answer.question)
+        else
+            redirect_to question_path(@current_user, @answer.question)
+        end
     end
 
     def update

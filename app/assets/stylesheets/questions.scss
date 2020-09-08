@@ -1,3 +1,19 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.grid-container.question {
+    display: grid;
+    grid-gap: 70px 70px;
+    grid-template-rows: auto;
+    overflow:auto;
+  }
+
+.grid-item.question{
+    font-size: 30px;
+}
+
+.tag{
+    background-color: rgb(153, 206, 101);
+    border: solid;
+}

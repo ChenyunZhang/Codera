@@ -28,5 +28,6 @@ Rails.application.routes.draw do
 #################### Answer Route #############################
   get "categories", to: "categories#index", as: "categories"
   get "categories/:id", to: "categories#show", as: "category"
+  patch "categories/:id", to: "categories#update"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

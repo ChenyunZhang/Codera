@@ -8,9 +8,8 @@
           <li><%=link_to '<i class="glyphicon glyphicon-education" style="font-size:18px"></i> Post a Question'.html_safe, new_question_path(@current_user)%></li>
           </ul>
             <ul class="nav navbar-nav navbar-right">
-            <!--################### use .html_safe inside of link_to for the glyphicon ################ -->
-				<li><%=link_to '<i class="glyphicon glyphicon-user" style="font-size:18px"></i> Profile'.html_safe, edit_user_path(@current_user)%></li>
-                <li><%=link_to '<i class="glyphicon glyphicon-log-out" style="font-size:18px"></i> Log out'.html_safe, logout_path, method: :delete%></li>
+            <li><%=link_to '<i class="glyphicon glyphicon-user" style="font-size:18px"></i> Profile'.html_safe, edit_user_path(@current_user)%></li>
+            <li><%=link_to '<i class="glyphicon glyphicon-log-out" style="font-size:18px"></i> Log out'.html_safe, logout_path, method: :delete%></li>
             </ul>
     </div>
 </div>

@@ -36,12 +36,17 @@ user_12=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.la
 user_13=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
 user_14=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
 
-category_1 =Category.create(name: "Ruby")
-category_2 =Category.create(name: "Java")
-category_3 =Category.create(name: "C++")
+category_1 =Category.create(name: "C")
+category_2 =Category.create(name: "C++")
+category_3 =Category.create(name: "Java")
 category_4 =Category.create(name: "Java Script")
-category_5 =Category.create(name: "C")
+category_5 =Category.create(name: "PHP")
 category_6 =Category.create(name: "Python")
+category_7 =Category.create(name: "R")
+category_8 =Category.create(name: "Ruby")
+category_9 =Category.create(name: "SQL")
+category_10 =Category.create(name: "Other")
+
 
 30.times do
     Question.create(
