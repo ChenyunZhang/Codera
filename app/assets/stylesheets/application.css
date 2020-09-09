@@ -17,6 +17,11 @@
  *= require font-awesome
  */
 
+ /*
+ *= require rails_bootstrap_forms
+ */
+
+
 body {
     background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
     background-repeat:repeat;
@@ -25,12 +30,8 @@ body {
 }
 
 .navbar-custom{
-    background: rgba(179, 180, 182, 0.164);
+    background: rgba(68, 147, 221, 0.2);
 } 
-
-#form{
-    padding-top: 75px;
-}
 
 .navbar-brand, .nav.navbar-nav li a, .my_question td{
     color: rgba(8, 8, 8, 1);
@@ -44,6 +45,13 @@ body {
 .signup_link{
     font-size: 18px;
 }
+
+#form{
+    font-size: larger;
+    overflow: scroll;
+    font-family: 'Cuprum', sans-serif;
+}
+
 
 #error_explanation {
     color: red;
@@ -60,4 +68,8 @@ body {
 
 input[type=checkbox]{
     width:50px;
+}
+
+.cp-container-class {
+   
 }

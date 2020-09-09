@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/bootstrap-ruby/rails-bootstrap-forms.git
+  revision: d2bdc7feca891f2c4df5095925ed3bf1079fc3e7
+  branch: master
+  specs:
+    bootstrap_form (4.5.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -214,6 +223,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   bootstrap-sass
+  bootstrap_form!
   byebug
   capybara (>= 2.15)
   faker
