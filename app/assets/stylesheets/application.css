@@ -22,52 +22,19 @@
  */
 
 
+/************************ body for all ******************************************/
+
 body {
     background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); 
     background-repeat:repeat;
-    padding-top: 75px;
+    background-attachment: fixed;
+    padding-top: 52px;
 }
 
-.navbar-custom{
-    background: rgba(68, 147, 221, 0.2);
-} 
-
-.navbar-brand, .nav.navbar-nav li a, .my_question td{
-    color: rgba(8, 8, 8, 1);
-}
+/************************ body for all *****************************************/
 
 
-.welcome{
-    text-align: center;
-}
-
-.signup_link{
-    font-size: 18px;
-}
-
-#form{
-    font-size: larger;
-    overflow: scroll;
-    font-family: 'Cuprum', sans-serif;
-}
-
-
-#error_explanation {
-    color: red;
-    margin: 0 0 30px 0;
-}
-.col-md-4.col-md-offset-4{
-    overflow: scroll;
-}
-
-.field_with_errors{
-    @extend .has_error;
-    .form-control{
-        color: $state-danger-text;
-    }
-}
-
-/* Split the screen in half */
+/************************ formating home page **********************************/
 .split {
     height: 100%;
     width: 100%;
@@ -78,40 +45,48 @@ body {
     font-size:20px;
     color:white;
     overflow-x: hidden;
-  }
-  
-  /* If you want the content centered horizontally and vertically */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  body > button > div > a{
+}
+
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+
+body > button > div > a{
     color:white;
     width:100px;
-    font-size:20px;
-  }
+    font-size:3vh;
+    font-family: Lobster, Monospace;
+}
 
-  body > button > div > a:hover{
-      color:white;
-    }
+body > button > div > a:hover{
+    color:white;
+}
 
 body > button > h1{
-    font-size: 100px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15vh;
+    font-family: 'Anton';
+    font-weight: bold;
 }
+
+body > button > p.home_subtitle{
+    font-size: 3vh;
+    font-family: Lobster, Monospace;
+}
+
 
 body > button > div.homepage_1.btn.btn-primary{
     width:100px;
-    animation: homepage_1 2s;
+    animation: homepage_1 1.3s;
     animation-direction: reverse;
 }
 
 body > button > div.homepage_2.btn.btn-primary{
     width:100px;
-    animation: homepage_2 1s;
+    animation: homepage_2 1.3s;
     animation-direction: reverse;
 }
 
@@ -120,7 +95,7 @@ body > button > div.homepage_2.btn.btn-primary{
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(0px, 400PX);
+    transform: translate(0px, 500PX);
   }
 }
 
@@ -129,9 +104,149 @@ body > button > div.homepage_2.btn.btn-primary{
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(0px, -400PX);
+    transform: translate(0px, -500PX);
   }
+}
+
+div.or{
+    font-size:2vh;
+}
+/************************ body home page ***************************************/
+
+ /************************ formating nav bar  **********************************/
+.navbar-custom{
+    background: rgba(68, 147, 221, 0.2);
+} 
+
+.navbar-brand, .nav.navbar-nav li a, .my_question td{
+    color: rgba(8, 8, 8, 1);
+}
+
+#error_explanation {
+    color: red;
+    margin: 0 0 30px 0;
+}
+
+.signup_link{
+    font-size: 18px;
+    font-family: Lobster, Monospace;
+}
+
+#form{
+    font-size: larger;
+    overflow: auto;
+    padding-top: 100px;
+    font-family: 'Cuprum', sans-serif;
+}
+
+h1.welcome{
+    text-align: center;
+    font-family: Lobster, Monospace;
+    font-size: 5vh;
+}
+
+.col-md-4.col-md-offset-4{
+    overflow: auto;
+}
+
+.field_with_errors{
+    @extend .has_error;
+    .form-control{
+        color: $state-danger-text;
+    }
+}
+
+/************************ formating nav bar  ******************************************/
+
+
+ /************************ formating question index  **********************************/
+
+  /* .grid-container.question {
+    display: grid;
+    grid-gap: 70px 70px;
+    grid-template-rows: auto;
+    overflow:auto;
+  }
+
+.grid-item.question{
+    font-size: 30px;
+}
+
+.tag{
+    background-color: rgb(153, 206, 101);
+    border: solid;
+} */
+
+/* body {
+    margin: 40px;
+  }
+  
+  .box {
+    color: rgb(138, 13, 13);
+    background-color: rgb(86, 24, 202);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  } */
+/* #container_question{
+    grid-column-start: 2;
+    background-color: rgb(86, 24, 202);
+} */
+
+.card-body{
+    margin-bottom: 5vh;
 }
 
 
 
+/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+
+@supports (display: grid) {
+  .wrapper > * {
+    margin: 0;
+  }
+}
+
+.card-title{
+    white-space: nowrap;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    height: 1.6em;
+}
+
+.card-body p{
+    color:greenyellow;
+}
+
+ /************************ formating question index  ***************************************/
+
+
+ /************************ formating category index page  **********************************/
+.grid-container.category {
+    display: grid;
+    width: 70%;
+    grid-gap: 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto auto;
+    padding-top: 40px;
+  }
+  
+.grid-item.category{
+  background-color: rgba(68, 147, 221, 0.2);
+    padding: 40px;
+    width: 300px;
+    height: 130px;
+    border-radius: 5%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+.grid-item.category:hover{
+    transform: translate(-20px);
+  }
+
+/************************ formating category index page  **********************************/
