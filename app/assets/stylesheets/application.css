@@ -23,9 +23,8 @@
 
 
 body {
-    background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
+    background-image:url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); 
     background-repeat:repeat;
-    /* background-image: linear-gradient(to right, rgba(129, 81, 13, 0), rgba(214, 231, 100, 0.637)); */
     padding-top: 75px;
 }
 
@@ -57,6 +56,9 @@ body {
     color: red;
     margin: 0 0 30px 0;
 }
+.col-md-4.col-md-offset-4{
+    overflow: scroll;
+}
 
 .field_with_errors{
     @extend .has_error;
@@ -65,11 +67,71 @@ body {
     }
 }
 
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    font-size:20px;
+    color:white;
+    overflow-x: hidden;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  body > button > div > a{
+    color:white;
+    width:100px;
+    font-size:20px;
+  }
 
-input[type=checkbox]{
-    width:50px;
+  body > button > div > a:hover{
+      color:white;
+    }
+
+body > button > h1{
+    font-size: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.cp-container-class {
-   
+body > button > div.homepage_1.btn.btn-primary{
+    width:100px;
+    animation: homepage_1 2s;
+    animation-direction: reverse;
 }
+
+body > button > div.homepage_2.btn.btn-primary{
+    width:100px;
+    animation: homepage_2 1s;
+    animation-direction: reverse;
+}
+
+@keyframes homepage_1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0px, 400PX);
+  }
+}
+
+@keyframes homepage_2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0px, -400PX);
+  }
+}
+
+
+

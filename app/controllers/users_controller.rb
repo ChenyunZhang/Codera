@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     before_action :get_user, only: [:show, :edit, :update, :destroy]
-    skip_before_action :auhorized_to_see_page, only: [:handle_login,:new,:create,:login]
+    skip_before_action :auhorized_to_see_page, only: [:handle_login,:new,:create,:login, :home]
 
     def handle_login
         # byebug
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       def logout
         session.delete(:user_id)
         @current_user = nil
-        redirect_to login_path
+        redirect_to "/"
     end
 
     def new

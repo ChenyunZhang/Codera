@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   patch "/users/:user_id/questions/:id", to: "questions#update"
   delete "/users/:user_id/questions/:id", to: 'questions#destroy', as: "delete_question"
 #################### ugly nested route #########################
-  root 'users#login'
+  root 'users#home'
 #################### Answer Route #############################
   get "questions/:id/answers/new", to: "answers#new", as: "new_answer"
   post 'answers', to: "answers#create"
