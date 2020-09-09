@@ -7,7 +7,8 @@
 <div class="row">
     <div class="question_show col-md-8 col-md-offset-2">
         <table class="table table-hover">
-            <h4>Current User: <strong><%=@user.full_name%></strong></h4>
+            <%= gravatar_for @current_user%>
+            <strong class="user_show_name"><%=@user.full_name%></strong>
             <thead>
                 <tr>
                 <th scope="col" >My Questions</th>

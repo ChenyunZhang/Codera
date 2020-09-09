@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_one_attached :avatar
     has_many :questions, -> {order ("title ASC")}, dependent: :destroy
     accepts_nested_attributes_for :questions, allow_destroy: true
     has_many :answers

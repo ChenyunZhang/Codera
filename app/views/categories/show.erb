@@ -1,21 +1,20 @@
 <%=render "users/nav"%>
 
 <div class="row">
-  <div class="question_show col-md-6 col-md-offset-3">
-    <table class="question_index table table-hover">
-      <thead>
-          <tr>
-          <th scope="col" >Questions</th>
-          </tr>
-      </thead>
-
-      <tbody>
-          <%@category.questions.uniq.each do |question|%>
-          <tr>
-              <td><%=link_to question.title, question_path(@current_user,question)%></td>
-          </tr>
+  <div class="col-md-6 col-md-offset-3 question_index">
+      <%@category.questions.uniq.each do |question|%>
+      <%# <div class="col-md-6"> %>
+      <div class= "card">
+          <div class="card-body">
+            <h5><%=link_to question.title, question_path(@current_user,question)%>,class:"card-title question_index"%></h5>
+            <h5 class="question_show_answer"><%=pluralize(question.answers.count,"answer")%></h5>
+            <% question.categories.uniq.each do |category|%>
+            <span><%=link_to category.name, category_path(category)%></span>
           <%end%>
-      </tbody>
-    </table>
-  </div>
+          <h6 class="question_show_username">by - <%=question.user.full_name%></h6>
+            <p class="question_index_btn"><%=link_to "more info", question_path(@current_user, question), class:"btn btn-primary"%></p>
+          </div>
+      </div>
+  <%# </div> %>
+  <%end%>
 </div>

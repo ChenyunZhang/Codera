@@ -29,6 +29,7 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(user_param)
+        @user.avatar.attach(params[:avatar])
         if @user.valid?
             log_in @user
             redirect_to user_path(@user)
@@ -70,6 +71,7 @@ class UsersController < ApplicationController
             :last_name,
             :password,
             :email,
+            :avatar,
             question_ids:[],
             questions_attributes: [:title, :content])
     end

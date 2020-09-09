@@ -1,18 +1,21 @@
 <%= render "users/nav"%>
 
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-6 col-md-offset-3 question_index">
       <% @questions.each do |question| %>
-      <div class="col-md-6">
+      <%# <div class="col-md-6"> %>
       <div class= "card">
-        <div class="card-header">Question</div>
-        <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"  class="img-thumbnail" alt="Responsive image">
           <div class="card-body">
-            <h5 class="card-title"><%=question.title%></h5>
-            <p><%=link_to "Answer", question_path(@current_user, question), class:"btn btn-primary btn-block"%></p>
+            <h5><%=link_to question.title, question_path(@current_user, question),class:"card-title question_index"%></h5>
+            <h5 class="question_show_answer"><%=pluralize(question.answers.count,"answer")%></h5>
+            <% question.categories.uniq.each do |category|%>
+            <span><%=link_to category.name, category_path(category)%></span>
+          <%end%>
+          <h6 class="question_show_username">by - <%=question.user.full_name%></h6>
+            <p class="question_index_btn"><%=link_to "more info", question_path(@current_user, question), class:"btn btn-primary"%></p>
           </div>
       </div>
-  </div>
+  <%# </div> %>
   <%end%>
 </div>
 

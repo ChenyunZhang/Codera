@@ -159,63 +159,55 @@ h1.welcome{
 /************************ formating nav bar  ******************************************/
 
 
- /************************ formating question index  **********************************/
+/************************ formating user show page  ***********************************/
 
-  /* .grid-container.question {
-    display: grid;
-    grid-gap: 70px 70px;
-    grid-template-rows: auto;
-    overflow:auto;
-  }
-
-.grid-item.question{
-    font-size: 30px;
-}
-
-.tag{
-    background-color: rgb(153, 206, 101);
-    border: solid;
-} */
-
-/* body {
-    margin: 40px;
-  }
-  
-  .box {
-    color: rgb(138, 13, 13);
-    background-color: rgb(86, 24, 202);
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
-  } */
-/* #container_question{
-    grid-column-start: 2;
-    background-color: rgb(86, 24, 202);
-} */
-
-.card-body{
-    margin-bottom: 5vh;
+.user_show_name{
+  font-size: 5vh;
 }
 
 
 
-/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+/************************ formating user show page  ***********************************/
 
-@supports (display: grid) {
-  .wrapper > * {
-    margin: 0;
-  }
+.card-title.question_index{
+  color: rgb(0, 0, 0);
 }
 
-.card-title{
-    white-space: nowrap;
-    overflow: scroll;
-    text-overflow: ellipsis;
-    height: 1.6em;
+.card-title.question_index:link {
+  text-decoration: none;
+}
+
+.card-title.question_index:hover {
+  color: rgba(11, 4, 112, 0.795);
 }
 
 .card-body p{
     color:greenyellow;
+}
+
+.col-md-6.col-md-offset-3.question_index{
+  padding-top: 5vh;
+}
+
+.col-md-6.col-md-offset-3.question_index .card{
+  background-color: rgba(138, 131, 139, 0.2);
+  margin: 1vh;
+  padding: 1.5vh;
+}
+
+.question_show_username{
+  text-align:right;
+  padding-right:2vh;
+  font-size: 2vh;
+  font-family: Monospace;
+}
+
+.question_show_answer{
+  font-size: 2vh;
+  font-family: Monospace;
+}
+.col-md-6.col-md-offset-3.question_index .card-title{
+  font-size: 3vh;
 }
 
  /************************ formating question index  ***************************************/
@@ -250,3 +242,26 @@ h1.welcome{
   }
 
 /************************ formating category index page  **********************************/
+
+/* question show page */
+.col-md-8.col-md-offset-2.question_show{
+  margin-top: 5vh;
+  background-color: rgba(138, 131, 139, 0.2);
+}
+
+.col-md-8.col-md-offset-2.question_show .card-title{
+  font-size: 5vh;
+}
+
+.question_link_show_edit_and_delete{
+  text-align: right;
+}
+
+.question-show-answer-section{
+  font-size:3vh;
+  margin: 2vh;
+}
+
+.quesiton-show-answer-content{
+  text-indent: 50px;
+}
