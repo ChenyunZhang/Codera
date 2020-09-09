@@ -1,13 +1,13 @@
  <div class="navbar navbar-fixed-top navbar-custom" role="navigation">
 	<div class="container-fluid">
-		    <ul class="nav navbar-nav">
+		    <ul class="nav navbar-nav active">
             <!--################### use .html_safe inside of link_to for the glyphicon ################ -->
           <li><%=link_to '<i class = "glyphicon glyphicon-home" style="font-size:18px"></i> Home'.html_safe, user_path(@current_user)%></li>
           <li><%=link_to '<i class="glyphicon glyphicon-th-list" style="font-size:18px"></i> Browse Questions'.html_safe, { :controller=> 'questions', :action => 'index' }%></li>
           <li><%=link_to '<i class="glyphicon glyphicon-book" style="font-size:18px"></i> Categories'.html_safe, { :controller=> 'categories', :action => 'index' }%></li>
           <li><%=link_to '<i class="glyphicon glyphicon-education" style="font-size:18px"></i> Post a Question'.html_safe, new_question_path(@current_user)%></li>
           </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right active">
             <li><%=link_to '<i class="glyphicon glyphicon-user" style="font-size:18px"></i> Profile'.html_safe, edit_user_path(@current_user)%></li>
             <li><%=link_to '<i class="glyphicon glyphicon-log-out" style="font-size:18px"></i> Log out'.html_safe, logout_path, method: :delete%></li>
             </ul>

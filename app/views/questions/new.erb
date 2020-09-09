@@ -1,29 +1,16 @@
 <%=render "users/nav"%>
 <div class="row" id="form">
+ <div class="row" id="form">
   <div class="col-md-4 col-md-offset-4">
-    <%=form_for @question do |f|%>
+  <%# <div class="col-md-4 col-md-offset-4"> %>
+  <%= bootstrap_form_for(@question) do |f| %>
       <h1 class= "welcome">Post a question</h1>
-      <br>
       <%= render "users/error"%>
-      <div class="form-group">
-        <%=f.text_field :title, placeholder: "Title", class: "form-control input-lg"%>
-      </div>
-      <br>
-<!--      <div class="form-group">
-      <%= f.fields_for :categories, @question.categories.build do |categories_fields| %>
-        <%= categories_fields.text_field :name, placeholder: "Category",class: "form-control input-lg" %>
-      <% end %>
-      </div>
-      <br>-->
-     <div class="form-group">
-      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "form-control input-lg checkbox"%>
-      </div>
-      <br>
-      <div class="form-group">
-        <%=f.text_area :content, rows: 7, placeholder: "Start here...",class:"form-control input-lg"%>
-      </div>
-      <br>
+      <%=f.text_field :title, placeholder: "Title", class: "form-control input-lg"%>
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, wrapper: {class: "cp-container-class"}%>
+      <%=f.text_area :content, rows: 7, placeholder: "Start here...",class:"form-control input-lg"%>
       <%=f.submit "Post", class: "btn-block btn-primary btn-lg"%>
     <%end%>
   </div>
+</div>
 </div>
