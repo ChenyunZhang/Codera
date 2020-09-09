@@ -2,46 +2,5 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.grid-container.category {
-    display: grid;
-    width: 70%;
-    grid-gap: 10px 10px;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: auto auto auto;
-    padding-top: 40px;
-  }
-  
-.grid-item.category{
-  background-color: rgba(68, 147, 221, 0.2);
-    padding: 40px;
-    width: 300px;
-    height: 130px;
-    border-radius: 5%;
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-  }
 
-.grid-item.category:hover{
-    // transform: rotate(-10deg);
-    // transform: scale(1,2);
-    // transform: rotate(10deg);
-    // transform: rotateY(30deg);
-    transform: translate(-20px);
-  }
-
-  // @keyframes example {
-  //   0%   {background-color:red; left:0px; top:0px;}
-  //   25%  {background-color:yellow; left:200px; top:0px;}
-  //   50%  {background-color:blue; left:200px; top:200px;}
-  //   75%  {background-color:green; left:0px; top:200px;}
-  //   100% {background-color:red; left:0px; top:0px;}
-  // }
-
-  .question_show.col-md-8.col-md-offset-2, .edit.tcol-md-4.col-md-offset-4{
-    overflow:scroll;
-  }
 
