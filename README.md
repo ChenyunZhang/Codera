@@ -1,9 +1,12 @@
 # 👨‍🏫 Codera 👩‍🏫
-##### Codera is a web app that allows user to post and answer coding questions.
+## Codera is a web app that allows user to post and answer coding questions.
 
+### Home Page
 ![Home_Page](app/assets/images/home.png)
 
+### Login Page
 ![Login](app/assets/images/login.png)
+
 ### Features
 
 #### Password Authentication
