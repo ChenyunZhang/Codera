@@ -26,11 +26,11 @@ User.reset_pk_sequence
 Category.reset_pk_sequence
 
 ################### random programming question
-html = open("https://hackr.io/blog/programming-interview-questions")
-doc = Nokogiri::HTML(html)
-# html = JSON.parse(doc)
-temp_arr = doc.css("body").css("div.content").css("strong").text
-arr = temp_arr.split("Question: ").select{|question| question != ""}.join.split("Answer:")
+# html = open("https://hackr.io/blog/programming-interview-questions")
+# doc = Nokogiri::HTML(html)
+# # html = JSON.parse(doc)
+# temp_arr = doc.css("body").css("div.content").css("strong").text
+# arr = temp_arr.split("Question: ").select{|question| question != ""}.join.split("Answer:")
 
 ################### random programming joke and answers #################
 html_2 = open("https://official-joke-api.appspot.com/jokes/programming/ten")
@@ -91,7 +91,7 @@ category_10 =Category.create(name: "Other")
 
 
 10.times do
-    Answer.create(content: arr.sample, question: Question.all.sample, user: User.all.sample)
+    Answer.create(content: question_arr.sample, question: Question.all.sample, user: User.all.sample)
 end
 
 30.times do

@@ -167,8 +167,8 @@ h1.welcome{
 }
 
 .user_full_name_show{
-  font-size: 5vh;
-  font-family: Lobster, Monospace;
+  font-size: 3vh;
+  font-family: Monospace;
   animation: user_name 1.2s;
   animation-direction: reverse;
   /* background-color: rgb(132, 96, 218); */
@@ -179,7 +179,7 @@ h1.welcome{
   transform: translate(0, 0);
 }
 100% {
-  transform: translate(0px, -300PX);
+  transform: translate(0,-300px);
 }
 }
 

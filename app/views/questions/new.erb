@@ -6,7 +6,7 @@
       <h1 class= "welcome">Post a question</h1>
       <%= render "users/error"%>
       <%=f.text_field :title, placeholder: "Title", class: "form-control input-lg"%>
-      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, wrapper: {class: "cp-container-class"}%>
+      <%= f.collection_check_boxes :categories, Category.all, :id, :name%>
       <%=f.text_area :content, rows: 7, placeholder: "Start here...",class:"form-control input-lg"%>
       <%=f.submit "Post", class: "btn-block btn-primary btn-lg"%>
     <%end%>
