@@ -27,4 +27,4 @@
 #### Other Features
 * CSS and Bootstrap
 
-![Domain Model](/images/Domain-Model.png)
+![Domain Model](https://https://github.com/ChenyunZhang/codera/app/assets/images/Domain-Model.png)
