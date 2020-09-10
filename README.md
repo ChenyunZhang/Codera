@@ -1,4 +1,5 @@
 # 👨‍🏫 Codera 👩‍🏫
+##### Codera is a web app that allows user to post and answer coding questions.
 
 ### User Stories:
 1. user can log in/out the application. create, read, update
