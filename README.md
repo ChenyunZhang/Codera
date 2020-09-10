@@ -24,4 +24,4 @@
 #### Other Features
 * CSS and Bootstrap
 
-![Domain_Model](app/assets/images/Domain_Model.png)
+![Domain_Model](app/assets/images/domain.png)
