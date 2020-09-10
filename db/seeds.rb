@@ -8,6 +8,10 @@
 
 require 'faker'
 require 'activerecord-reset-pk-sequence'
+require 'open-uri'
+require 'nokogiri'
+require 'json'
+require 'pry'
 
 QuesLan.destroy_all
 Answer.destroy_all
@@ -21,20 +25,27 @@ Question.reset_pk_sequence
 User.reset_pk_sequence
 Category.reset_pk_sequence
 
-user_1 = User.create(first_name:"Donald",last_name:"Duck",email: "abc@abc.com",password:"abc123")
-user_2 = User.create(first_name:"Minnie",last_name:"Duck",email: "efg@abc.com",password:"abc123")
-user_3=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_4=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_5=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_6=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_7=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_8=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_9=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_10=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_11=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_12=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_13=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
-user_14=User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
+# html_1 = open("https://simpleprogrammer.com/programming-interview-questions/")
+# doc_1 = Nokogiri::HTML(html_1)
+# list_of_problems = doc_1.css("ol").css("li").map(&:text)
+
+html_2 = open("https://official-joke-api.appspot.com/jokes/programming/ten")
+doc_2_temp = Nokogiri::HTML(html_2)
+doc_2 = JSON.parse(doc_2_temp)
+question_arr = doc_2.map{ |joke|joke["setup"]}
+answer_arr =  doc_2.map{ |joke|joke["punchline"]}
+
+html_1 = open("https://official-joke-api.appspot.com/jokes/programming/ten")
+doc_1_temp = Nokogiri::HTML(html_1)
+doc_1 = JSON.parse(doc_1_temp)
+question_arr_1 = doc_1.map{ |joke|joke["setup"]}
+
+
+user_1 = User.create(first_name:"John",last_name:"Doe",email: "abc@abc.com",password:"abc123")
+
+5.times do
+    User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
+end
 
 category_1 =Category.create(name: "C")
 category_2 =Category.create(name: "C++")
@@ -47,26 +58,41 @@ category_8 =Category.create(name: "Ruby")
 category_9 =Category.create(name: "SQL")
 category_10 =Category.create(name: "Other")
 
+    question_1 = Question.create(title: question_arr.first, content: question_arr.first, user: User.all.sample)
+    answer_1 = Answer.create(content: answer_arr.first, question: question_1, user: User.all.sample)
 
-30.times do
-    Question.create(
-        title: "Why is #{Faker::Creature::Animal.name} you favorite animal?",
-        content: Faker::Quote.famous_last_words,
-        user: [user_1,user_2,user_3,user_4,user_5,user_6,user_7,user_8,user_8,user_9,user_10,user_11,user_12,user_13,user_14].sample
-    )
-end
+    question_2 = Question.create(title: question_arr.second,content: question_arr.second, user: User.all.sample)
+    answer_2 = Answer.create(content: answer_arr.second, question: question_2, user: User.all.sample)
+    
+    question_3 = Question.create(title: question_arr.third,content: question_arr.third, user: User.all.sample)
+    answer_3 = Answer.create(content: answer_arr.third, question: question_3, user: User.all.sample)
+    
+    question_4 = Question.create(title: question_arr.fourth, content: question_arr.fourth, user: User.all.sample)
+    answer_4 = Answer.create(content: answer_arr.fourth, question: question_4, user: User.all.sample)
+    
+    question_5 = Question.create(title: question_arr.fifth,content: question_arr.fifth, user: User.all.sample)
+    answer_5 = Answer.create(content: answer_arr.fifth, question: question_5, user: User.all.sample)
+    
+    question_6 = Question.create(title: question_arr[5],content: question_arr[5], user: User.all.sample)
+    answer_6 = Answer.create(content: answer_arr[5], question: question_6, user: User.all.sample)
+    
+    question_7 = Question.create(title: question_arr[6],content: question_arr[6], user: User.all.sample)
+    answer_7 = Answer.create(content: answer_arr[6], question: question_7, user: User.all.sample)
+    
+    question_8 = Question.create(title: question_arr[7],content: question_arr[7], user: User.all.sample)
+    answer_8 = Answer.create(content: answer_arr[7], question: question_8, user: User.all.sample)
+    
+    question_9 = Question.create(title: question_arr[8],content: question_arr[8], user: User.all.sample)
+    answer_9 = Answer.create(content: answer_arr[8], question: question_9, user: User.all.sample)
+
 
 10.times do
-    Answer.create(
-        content: "abitasse platea dictumst.",
-        question: [Question.first,Question.second,Question.third,Question.fourth,Question.fifth].sample,
-        user: [user_1,user_2].sample
-    )
+    Answer.create(content: question_arr_1.sample, question: Question.all.sample, user: User.all.sample)
 end
 
 30.times do
-    QuesLan.create(question: [Question.first,Question.second,Question.third,Question.fourth,Question.fifth].sample,
-                    category: [category_1,category_2,category_3,category_4,category_5,category_6].sample
+    QuesLan.create(question: Question.all.sample,
+                category: Category.all.sample
     )
 end
 
