@@ -1,8 +1,9 @@
 # 👨‍🏫 Codera 👩‍🏫
 ##### Codera is a web app that allows user to post and answer coding questions.
 
-![Home Page](https://github.com/ChenyunZhang/codera/blob/master/app/assets/images/home.png?raw=true)
+![Home_Page](app/assets/images/home.png)
 
+![Login](app/assets/images/login.png)
 ### Features
 
 #### Password Authentication
@@ -20,4 +21,4 @@
 #### Other Features
 * CSS and Bootstrap
 
-![Domain Model](https://github.com/ChenyunZhang/codera/blob/master/app/assets/images/Domain-Model.png?raw=true)
+![Domain_Model](app/assets/images/Domain_Model.png)
