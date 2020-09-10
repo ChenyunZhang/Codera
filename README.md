@@ -20,5 +20,5 @@
 #### Other Features
 * CSS and Bootstrap
 
-![Domain Model]((/https://github.com/ChenyunZhang/codera/blob/master/app/assets/images/Domain-Model.png?raw=true)
+![Domain Model]((https://github.com/ChenyunZhang/codera/blob/master/app/assets/images/Domain-Model.png?raw=true)
 )
