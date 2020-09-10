@@ -35,3 +35,8 @@
 1. Got the projec proposal approved
 2. setting up controller, models, activerecord associations, and seeds.
 3. the activerecord-reset-pk-sequence and faker gem did not work initially, fixed by putting require "faker" and require "activerecord-reset-pk-sequence".
+
+### Stretch goal:
+## 1. Comment on the a answer.
+## 2. Users have options to choose to answer and ask questions anonymously.
+## 3. rate a question

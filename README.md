@@ -7,17 +7,24 @@
 4. user can check the categories of the questions.
 
 
+![Home Page](/images/home.png)
 
-## Stretch goal:
-## 1. Comment on the a answer.
-## 2. Users have options to choose to answer and ask questions anonymously.
-## 3. rate a question
 
-#How to Install
-1. Clone the repo onto your local machine.
-2. Change the directory to the repo.
-3. In you terminal, run 'bundle install'.
-4. Run 'rake db:migrate'.
-5. Run 'rake db:seed'.
-6. Run 'rails s' to run the local server.
-7. open your browser, and type the url http://localhost:3000 to view the page
+### Features
+
+#### Password Authentication
+* Validate logged in users using sessions
+* Validate email with regex
+
+#### CRUD Operations
+* display error messages for all invalid/empty inputs
+* logged in user can post/edit/delete questions and answers.
+* Browser all questions, or by category
+
+#### ActiveRecord Associations
+* There are 5 models have has_many, belongs_to and has_many through associations
+
+#### Other Features
+* CSS and Bootstrap
+
+![Domain Model](/images/Domain-Model.png)
