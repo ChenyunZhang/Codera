@@ -65,3 +65,5 @@ gem "bootstrap_form",
     git: "https://github.com/bootstrap-ruby/rails-bootstrap-forms.git",
     branch: "master"
 
+gem 'pry' 
+gem 'nokogiri' 

@@ -2,46 +2,39 @@
 <div> <%= render "users/nav"%> </div>
 <%end%>
 
-
-<!--break-->
-<div class="row">
-    <div class="question_show col-md-8 col-md-offset-2">
-        <table class="table table-hover">
-            <%= gravatar_for @current_user%>
-            <strong class="user_show_name"><%=@user.full_name%></strong>
-            <thead>
-                <tr>
-                <th scope="col" >My Questions</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <% @questions.each_with_index do |question,index|%>
-                <tr class="table-secondary">
-                    <th scope="row"><%=index+1%></th>
-                    <td><%=link_to question.title, question_path(@current_user,question), {:style=>'color: rgb(0, 0, 0);', :class => "css_class"} %></td>
-                    <td><%=link_to "edit", edit_question_path(question)%></td>
-                    <td><%=link_to "delete", delete_question_path(@current_user,question), :method => :delete %></td>
-                </tr>
-                <%end%>
-            </tbody>
-
-            <thead>
-                <tr>
-                <th scope="col" >My Answered Questions</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <% @user.question_arr.each_with_index do |question,index|%>
-                <tr>
-                    <th scope="row"><%=index+1%></th>
-                    <td><%=link_to question.title, question_path(@current_user,question), {:style=>'color: rgb(0, 0, 0);', :class => "css_class"} %></td>
-                </tr>
-                <%end%>
-            </tbody>
-        </table>
-    </div>
+<div class="row user_home_page">
+  <div class="user_home_section_1">
+   <div class="user_full_name_show"><%= gravatar_for @user %>Hi:<%=@user.first_name%></div>
+  </div>
 </div>
 
+<hr/>
+
+<div class="row user_home_page">
+  <div class="col-md-8 col-md-offset-2 user_home_section_2">
+ <div class="user-home-page-font"> Posted Questions </div><hr/>
+            <% @questions.each_with_index do |question,index| %>
+            <div class="user_home_page-question-font"><%=index+1%>.
+            <%=link_to question.title, question_path(@current_user,question), class: "user_home_page-question-font"%>
+            <div>
+            <%=pluralize(question.answers.count,"answer")%>
+            <%=link_to "edit", edit_question_path(question) %>
+            <%=link_to "delete", delete_question_path(@current_user,question), :method => :delete %>
+            </div>
+            </div><hr/>
+            <%end%>
+  </div>
+</div>
+
+<div class="row user_home_page">
+  <div class="col-md-8 col-md-offset-2 user_home_section_3">
+ <div class="user-home-page-font"> Answered Questions</div><hr/>
+        <%@user.question_arr.each_with_index do |question,index|%>
+        <span class= "user_home_page-question-font"><%=index+1%>. </span>
+        <%=link_to question.title, question_path(@current_user,question), class: "user_home_page-question-font"%>
+        <div class="user_home_page-question-font"><%=pluralize(question.answers.count,"answer")%></div>
+        <hr/>
+        <%end%>
+  </div>
+</div>
 

@@ -20,11 +20,11 @@
                             <%if answer.user == @current_user %>
                                 <%=link_to "edit", edit_answer_path(answer), class: "question_link_show_edit_and_delete"%> | 
                                 <%=link_to "delete", delete_answer_path(answer), :method => :delete , class: "question_link_show_edit_and_delete"%>
-                        <%end%>
-                         </div>
+                            <%end%>
+                        </div>
                     <hr/>
-                    <%end%>
                 </div>
+                <%end%>
                 </div>
                 </div>
         </div>

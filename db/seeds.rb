@@ -25,23 +25,27 @@ Question.reset_pk_sequence
 User.reset_pk_sequence
 Category.reset_pk_sequence
 
-# html_1 = open("https://simpleprogrammer.com/programming-interview-questions/")
-# doc_1 = Nokogiri::HTML(html_1)
-# list_of_problems = doc_1.css("ol").css("li").map(&:text)
+################### random programming question
+html = open("https://hackr.io/blog/programming-interview-questions")
+doc = Nokogiri::HTML(html)
+# html = JSON.parse(doc)
+temp_arr = doc.css("body").css("div.content").css("strong").text
+arr = temp_arr.split("Question: ").select{|question| question != ""}.join.split("Answer:")
 
+################### random programming joke and answers #################
 html_2 = open("https://official-joke-api.appspot.com/jokes/programming/ten")
 doc_2_temp = Nokogiri::HTML(html_2)
 doc_2 = JSON.parse(doc_2_temp)
 question_arr = doc_2.map{ |joke|joke["setup"]}
 answer_arr =  doc_2.map{ |joke|joke["punchline"]}
 
-html_1 = open("https://official-joke-api.appspot.com/jokes/programming/ten")
-doc_1_temp = Nokogiri::HTML(html_1)
-doc_1 = JSON.parse(doc_1_temp)
-question_arr_1 = doc_1.map{ |joke|joke["setup"]}
+# html_1 = open("https://official-joke-api.appspot.com/jokes/programming/ten")
+# doc_1_temp = Nokogiri::HTML(html_1)
+# doc_1 = JSON.parse(doc_1_temp)
+# question_arr_1 = doc_1.map{ |joke|joke["setup"]}
 
 
-user_1 = User.create(first_name:"John",last_name:"Doe",email: "abc@abc.com",password:"abc123")
+user_1 = User.create(first_name:"Chenyun",last_name:"Zhang",email: "morningchenyun@gmail.com",password:"abc123")
 
 5.times do
     User.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name,email: Faker::Internet.email,password:"abc123")
@@ -87,7 +91,7 @@ category_10 =Category.create(name: "Other")
 
 
 10.times do
-    Answer.create(content: question_arr_1.sample, question: Question.all.sample, user: User.all.sample)
+    Answer.create(content: arr.sample, question: Question.all.sample, user: User.all.sample)
 end
 
 30.times do

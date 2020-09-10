@@ -161,9 +161,52 @@ h1.welcome{
 
 /************************ formating user show page  ***********************************/
 
-.user_show_name{
-  font-size: 5vh;
+.user_home_section_1{
+  /* border: solid 5px; */
+  padding: 3vh;
 }
+
+.user_full_name_show{
+  font-size: 5vh;
+  font-family: Lobster, Monospace;
+  animation: user_name 1.2s;
+  animation-direction: reverse;
+  /* background-color: rgb(132, 96, 218); */
+}
+
+@keyframes user_name {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(0px, -300PX);
+}
+}
+
+
+
+.user_home_section_2{
+  margin-bottom: 3vh;
+  background-color:rgba(127, 174, 218, 0.2);
+}
+
+.user_home_section_3{
+  background-color:rgba(127, 174, 218, 0.2);
+}
+
+.user-home-page-font{
+  font-weight: bold;
+  font-family: Monospace;
+  font-size:3.5vh;
+}
+
+.user_home_page-question-font{
+  font-size:3vh;
+  color:black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
 
 
 
@@ -181,19 +224,27 @@ h1.welcome{
   color: rgba(11, 4, 112, 0.795);
 }
 
-.card-body p{
+/* .card-body p{
     color:greenyellow;
-}
+} */
 
 .col-md-6.col-md-offset-3.question_index{
-  padding-top: 5vh;
+  padding-top: 1vh;
 }
 
 .col-md-6.col-md-offset-3.question_index .card{
   background-color: rgba(138, 131, 139, 0.2);
   margin: 1vh;
   padding: 1.5vh;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
+
+.col-md-6.col-md-offset-3.question_index .card:hover{
+  transform: translate(20px);
+  background: rgba(68, 147, 221, 0.2);
+}
+
 
 .question_show_username{
   text-align:right;
@@ -265,3 +316,7 @@ h1.welcome{
 .quesiton-show-answer-content{
   text-indent: 50px;
 }
+
+/* .gravatar{
+  float:left;
+} */

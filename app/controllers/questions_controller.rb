@@ -35,6 +35,7 @@ class QuestionsController < ApplicationController
         redirect_to user_path(@current_user)
     end
 
+
     private
 
     def get_question

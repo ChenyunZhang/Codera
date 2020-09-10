@@ -6,7 +6,7 @@
       <%# <div class="col-md-6"> %>
       <div class= "card">
           <div class="card-body">
-            <h5><%=link_to question.title, question_path(@current_user,question)%>,class:"card-title question_index"%></h5>
+            <h5><%=link_to question.title, question_path(@current_user,question),class:"card-title question_index"%></h5>
             <h5 class="question_show_answer"><%=pluralize(question.answers.count,"answer")%></h5>
             <% question.categories.uniq.each do |category|%>
             <span><%=link_to category.name, category_path(category)%></span>
