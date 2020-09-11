@@ -8,7 +8,6 @@
 4. bootstrap dropdown box is not compatible with rails, research if have tmie.
 5. add profile picture
 ## 9/7
-1. 
 
 ## 9/6/2020
 1. fixed the deplicate answered questions bug.
