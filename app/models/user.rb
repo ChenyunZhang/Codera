@@ -4,6 +4,9 @@ class User < ApplicationRecord
     accepts_nested_attributes_for :questions, allow_destroy: true
     has_many :answers
     accepts_nested_attributes_for :answers, allow_destroy: true
+
+    attr_accessible :first_name, :last_name, :email, :password, :remember_token
+
 ################################ Validation ###########################################
     before_save {self.email = email.downcase } #or { email.downcase!}
     
