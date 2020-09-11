@@ -51,7 +51,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-  gem 'activerecord-reset-pk-sequence'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -67,3 +66,4 @@ gem "bootstrap_form",
 gem 'pry' 
 gem 'nokogiri'
 gem 'faker' 
+gem 'activerecord-reset-pk-sequence'
