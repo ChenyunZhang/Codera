@@ -54,7 +54,7 @@ end
 category_1 =Category.create(name: "C")
 category_2 =Category.create(name: "C++")
 category_3 =Category.create(name: "Java")
-category_4 =Category.create(name: "Java Script")
+category_4 =Category.create(name: "JavaScript")
 category_5 =Category.create(name: "PHP")
 category_6 =Category.create(name: "Python")
 category_7 =Category.create(name: "R")
