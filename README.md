@@ -4,13 +4,13 @@
 <ul>
   <li><a href="#About">About</a></li>
   <li><a href="#Features">Features</a></li>
-  <li><a href="https://codera-co.herokuapp.com/">Live</a></li>
+  <li><a href="https://codera-co.herokuapp.com/">Live Site</a></li>
   <li><a href="#Stacks">Stacks</a></li>
    <li><a href="#Schema">Schema</a></li>
 </ul>
 
 ## About
-<p> Codera is a web app that allows user to post and answer coding questions.</p>
+<p> Codera is a full stack ruby application. It's a Q&A platform that allows users to share and grow their coding knowledges. After create an account with Codera. Users can ask or answer coding questions to their fellow developers for different programming languages or topics. Users can easily manage their answered or posted questions in their home page.</p>
 
 <div>
      <img align="center" width=500px src="app/assets/images/home.png"/>
