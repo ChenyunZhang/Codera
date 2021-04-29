@@ -10,8 +10,10 @@
 ## About
 <p> Codera is a web app that allows user to post and answer coding questions.</p>
 
-<img align="left" width=200px src="app/assets/images/home.png"/>
-<img align="right" width=200px src="app/assets/images/login.png"/>
+<div>
+<img align="left" width=350px src="app/assets/images/home.png"/>
+<img align="right" width=350px src="app/assets/images/login.png"/>
+</div>
 
 ### Demo <a href="https://codera-co.herokuapp.com/">Codera</a>
 
