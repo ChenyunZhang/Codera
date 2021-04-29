@@ -7,10 +7,11 @@
   <li>Stacks</li>
 </ul>
 
----
-### About
+## About
 <p align="center"> Codera is a web app that allows user to post and answer coding questions.</p>
+
 ![Home_Page](app/assets/images/home.png)
+
 ![login_Page](app/assets/images/login.png)
 
 ### Demo <a href="https://codera-co.herokuapp.com/">Codera</a>
