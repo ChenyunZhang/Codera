@@ -1,6 +1,4 @@
-<h2 align="center">Codera</h2>
-<p align="center"> Codera is a web app that allows user to post and answer coding questions.</p>
-
+<h2>Codera</h2>
 ---
 ## Table of Content
 <ul>
@@ -8,15 +6,14 @@
   <li>Features</li>
   <li>Stacks</li>
 </ul>
-### Home Page
-![Home_Page](app/assets/images/home.png)
 
-### Login Page
+---
+### About
+<p align="center"> Codera is a web app that allows user to post and answer coding questions.</p>
+![Home_Page](app/assets/images/home.png)
 ![login_Page](app/assets/images/login.png)
 
-### Demo
-<a href="https://codera-co.herokuapp.com/">Codera</a>
-
+### Demo <a href="https://codera-co.herokuapp.com/">Codera</a>
 
 ### Features
 
