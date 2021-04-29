@@ -27,20 +27,20 @@
         </ul>
     </li>
       <li>
-      <ul>CRUD Operations
-        <li>display error messages for all invalid/empty inputs</li>
-        <li>Logged in user can post/edit/delete questions and answers</li>
-        <li>Browser all questions, or by category</li>
-      </ul>
+        <ul>CRUD Operations
+          <li>display error messages for all invalid/empty inputs</li>
+          <li>Logged in user can post/edit/delete questions and answers</li>
+          <li>Browser all questions, or by category</li>
+        </ul>
     </li>
   </ul>
   
 
 ## Stacks
   <ul>
-    <li>CSS and Bootstrap</li>
-    <li>CSS and Bootstrap</li>
-    <li>CSS and Bootstrap</li>
+    <li>Ruby</li>
+    <li>Ruby on Rails</li>
+    <li>CSS 2D animation and Bootstrap</li>
   </ul>
   
 ## Schema
