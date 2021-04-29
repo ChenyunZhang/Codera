@@ -1,4 +1,10 @@
-<h2 style="text-align:center"> 👨‍🏫 Codera 👩‍🏫 </h1>
+<HTML>
+  <style>
+    h2.title{
+      text-align:center;
+    }
+  </style>
+<h2 class="title"> 👨‍🏫 Codera 👩‍🏫 </h1>
 ## Codera is a web app that allows user to post and answer coding questions.
 
 ### Home Page
@@ -29,3 +35,4 @@
 * CSS and Bootstrap
 
 ![Domain_Model](app/assets/images/domain.png)
+</HTML>
