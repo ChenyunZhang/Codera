@@ -4,8 +4,9 @@
 <ul>
   <li><a href="#About">About</a></li>
   <li><a href="#Features">Features</a></li>
-  <li><a href="#Demo">Demo</a></li>
+  <li><a href="https://codera-co.herokuapp.com/">Codera</a></li>
   <li><a href="#Stacks">Stacks</a></li>
+   <li><a href="#Schema">Schema</a></li>
 </ul>
 
 ## About
@@ -17,24 +18,30 @@
 </div>
 
 
-## Demo 
-<div><a href="https://codera-co.herokuapp.com/">Codera</a></div>
+## Features
+  <ul>
+      <li>
+        <ul>Password Authentication
+          <li>Validate logged in users using sessions</li>
+          <li>Validate email with regex</li>
+        </ul>
+    </li>
+      <li>
+      <ul>CRUD Operations
+        <li>display error messages for all invalid/empty inputs</li>
+        <li>Logged in user can post/edit/delete questions and answers</li>
+        <li>Browser all questions, or by category</li>
+      </ul>
+    </li>
+  </ul>
+  
 
-### Features
-
-#### Password Authentication
-* Validate logged in users using sessions
-* Validate email with regex
-
-#### CRUD Operations
-* display error messages for all invalid/empty inputs
-* logged in user can post/edit/delete questions and answers.
-* Browser all questions, or by category
-
-#### ActiveRecord Associations
-* There are 5 models have has_many, belongs_to and has_many through associations
-
-#### Other Features
-* CSS and Bootstrap
-
+## Stacks
+  <ul>
+    <li>CSS and Bootstrap</li>
+    <li>CSS and Bootstrap</li>
+    <li>CSS and Bootstrap</li>
+  </ul>
+  
+## Schema
 ![Domain_Model](app/assets/images/domain.png)
