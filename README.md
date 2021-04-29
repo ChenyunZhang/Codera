@@ -1,5 +1,5 @@
-<h2 align="center"> 👨‍🏫 Codera 👩‍🏫 </h2>
-## Codera is a web app that allows user to post and answer coding questions.
+<h2 align="center">Codera</h2>
+### Codera is a web app that allows user to post and answer coding questions.
 
 ### Home Page
 ![Home_Page](app/assets/images/home.png)
