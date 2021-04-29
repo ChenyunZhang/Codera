@@ -1,6 +1,8 @@
 <h2>Codera</h2>
+
 ---
 ## Table of Content
+
 <ul>
   <li>About</li>
   <li>Features</li>
