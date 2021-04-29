@@ -14,9 +14,13 @@
 
 <div>
      <img align="center" width=500px src="app/assets/images/home.png"/>
+ 
      <img align="center" width=500px src="app/assets/images/login.png"/>
+     
      <img align="center" width=500px src="project2_2.png"/>
+     
      <img align="center" width=500px src="project2_3.png"/>
+     
      <img align="center" width=500px src="project2_4.png"/>
 </div>
 
