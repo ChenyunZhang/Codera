@@ -4,19 +4,21 @@
 <ul>
   <li><a href="#About">About</a></li>
   <li><a href="#Features">Features</a></li>
-  <li>Stacks</li>
+  <li><a href="#Demo">Demo</a></li>
+  <li><a href="#Stacks">Stacks</a></li>
 </ul>
 
 ## About
 <p> Codera is a web app that allows user to post and answer coding questions.</p>
 
 <div>
-<img align="left" width=500px src="app/assets/images/home.png"/>
-<img align="right" width=500px src="app/assets/images/login.png"/>
+     <img align="center" width=500px src="app/assets/images/home.png"/>
+     <img align="center" width=500px src="app/assets/images/login.png"/>
 </div>
 
 
-### Demo <div><a href="https://codera-co.herokuapp.com/">Codera</a></div>
+## Demo 
+<div><a href="https://codera-co.herokuapp.com/">Codera</a></div>
 
 ### Features
 
