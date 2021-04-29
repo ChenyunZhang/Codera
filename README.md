@@ -1,6 +1,13 @@
 <h2 align="center">Codera</h2>
 <p align="center"> Codera is a web app that allows user to post and answer coding questions.</p>
 
+---
+## Table of Content
+<ul>
+  <li>About</li>
+  <li>Features</li>
+  <li>Stacks</li>
+</ul>
 ### Home Page
 ![Home_Page](app/assets/images/home.png)
 
