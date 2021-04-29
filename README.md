@@ -4,7 +4,7 @@
 <ul>
   <li><a href="#About">About</a></li>
   <li><a href="#Features">Features</a></li>
-  <li><a href="https://codera-co.herokuapp.com/">Codera</a></li>
+  <li><a href="https://codera-co.herokuapp.com/">Live</a></li>
   <li><a href="#Stacks">Stacks</a></li>
    <li><a href="#Schema">Schema</a></li>
 </ul>
