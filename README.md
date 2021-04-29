@@ -8,9 +8,9 @@
 </ul>
 
 ## About
-<p align="center"> Codera is a web app that allows user to post and answer coding questions.</p>
+<p> Codera is a web app that allows user to post and answer coding questions.</p>
 
-![Home_Page](app/assets/images/home.png)
+<img src="app/assets/images/home.png"/>
 
 ![login_Page](app/assets/images/login.png)
 
