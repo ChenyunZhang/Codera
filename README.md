@@ -1,4 +1,4 @@
-# 👨‍🏫 Codera 👩‍🏫
+<h2 style="text-align:center"> 👨‍🏫 Codera 👩‍🏫 </h1>
 ## Codera is a web app that allows user to post and answer coding questions.
 
 ### Home Page
