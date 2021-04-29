@@ -7,8 +7,9 @@
 ### Login Page
 ![login_Page](app/assets/images/login.png)
 
-### live demo
-https://codera-co.herokuapp.com/
+### Demo
+<a href="https://codera-co.herokuapp.com/">Codera</a>
+
 
 ### Features
 
