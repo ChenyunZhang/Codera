@@ -15,7 +15,8 @@
 <img align="right" width=500px src="app/assets/images/login.png"/>
 </div>
 
-### Demo <a href="https://codera-co.herokuapp.com/">Codera</a>
+
+### Demo <div><a href="https://codera-co.herokuapp.com/">Codera</a></div>
 
 ### Features
 
